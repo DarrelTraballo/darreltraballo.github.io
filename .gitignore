@@ -24,4 +24,4 @@ pnpm-debug.log*
 .idea/
 
 # old html files
-/old
+old/
