@@ -1,5 +1,19 @@
 ---
-const { image, altText, title, tech, description, details  } = Astro.props;
+interface Props {
+    image?: string;
+    altText?: string;
+    title?: string;
+    tech?: string;
+    description?: string;
+    details?: string;
+}
+const { image = "/images/placeholder.png", 
+        altText = "Placeholder Image", 
+        title = "mincecarft", 
+        tech = "Tech", 
+        description = "Placeholder Description", 
+        details = "Placeholder Details"  
+} = Astro.props;
 ---
 <!-- project card -->
 <div class="bg-gray-800 shadow-md rounded-lg overflow-hidden flex flex-col">
