@@ -1,0 +1,14 @@
+---
+const { image, altText, title, tech, description, details  } = Astro.props;
+---
+<!-- project card -->
+<div class="bg-gray-800 shadow-md rounded-lg overflow-hidden flex flex-col">
+    <img src={image} alt={altText} class="w-full h-60 rounded-lg object-cover">
+    <!-- card contents -->
+    <div class="p-4 flex flex-col flex-grow">
+        <h3 class="text-xl font-bold mb-2">{title}</h3>
+        <p class="text-sm text-gray-400 mb-2">{tech}</p>
+        <p class="text-gray-400 mb-4">{description}</p>
+        <p class="text-sm text-gray-500 mt-auto">{details}</p>
+    </div>
+</div>

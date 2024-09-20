@@ -1,14 +1,111 @@
+can you modify this to make use of tailwind css things instead?
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Railee Darrel Traballo - Game Developer Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>[Your Name] - Game Developer Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Center the whole content using a container */
+        .container {
+            max-width: 1200px; /* Set a max width for your content */
+            margin: 0 auto;    /* Center the content */
+            padding: 20px;     /* Add padding to avoid sticking to the edges */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        section {
+            padding: 20px 0;
+        }
+
+        /* Grid Layout for Project Cards */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        /* Styling each card */
+        .project-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Project image on top */
+        .project-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Card content styling */
+        .project-content {
+            padding: 15px;
+        }
+
+        .project-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .project-tech {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .project-details {
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+
 </head>
 <body>
     <header>
-        <h1>Railee Darrel Traballo</h1>
+        <h1>[Your Name]</h1>
         <p>Game Developer | Unity | C#</p>
     </header>
 
@@ -49,7 +146,7 @@
 
                 <!-- Project 3: Scatter -->
                 <div class="project-card">
-                    <img src="images/Scatter.png" alt="Scatter Project Image">
+                    <img src="public/images/Scatter.png" alt="Scatter Project Image">
                     <div class="project-content">
                         <h3 class="project-title">Scatter</h3>
                         <p class="project-description">A 2D RTS game where survival depends on real-time resource scavenging.</p>
@@ -95,11 +192,11 @@
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>Feel free to reach out to me at <a href="mailto:darreltraballo1121@gmail.com">darreltraballo1121@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/darrel-traballo" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+            <p>Feel free to reach out to me at <a href="#">your@email.com</a> or connect with me on <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
         </section>
     </div>
     <footer>
-        <p>&copy; 2024 Railee Darrel Traballo. All rights reserved.</p>
+        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
     </footer>
 </body>
 </html>
