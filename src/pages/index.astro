@@ -1,107 +1,129 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import ProjectCard from '../components/ProjectCard.astro';
+import Layout from "../layouts/Layout.astro"
+import ProjectCard from "../components/ProjectCard.astro"
 
-// https://www.linkedin.com/in/darrel-traballo
-// mailto:darreltraballo1121@gmail.com
+const Title = "Railee Darrel Traballo - Game Developer Portfolio"
+
+// links
+const emailLink = "mailto:darreltraballo1121@gmail.com"
+const linkedInLink = "https://www.linkedin.com/in/darrel-traballo"
 ---
 
-<Layout title="Railee Darrel Traballo - Game Developer Portfolio">
-	<!-- Header -->
-	<div class="container mx-auto text-center">
-		<h1 class="text-5xl px-8 py-4 font-bold">Railee Darrel Traballo</h1>
-		<p class="text-lg pb-4">Game Developer | Unity | C#</p>
-	</div>
+<Layout title={Title}>
+    <!-- Header -->
+    <div class="container mx-auto text-center">
+        <h1 class="text-5xl px-8 py-4 font-bold">Railee Darrel Traballo</h1>
+        <p class="text-lg pb-4">Game Developer | Unity | C#</p>
+    </div>
 
-	<div class="container mx-auto px-20 py-8">
-		<!-- About Me -->
-		<section id="about" class="mb-12">
-			<h2 class="text-2xl font-bold mb-4">About Me</h2>
-            <p class="text-justify text-lg">Hi, I'm Darrel, a game developer passionate about creating engaging and interactive experiences through code. I enjoy tackling both gameplay mechanics and technical challenges like algorithm development and recreating existing game mechanics, and I'm always excited to learn and improve!</p>
-		</section>
+    <main class="container mx-auto px-20 py-8">
+        <!-- About Me -->
+        <section id="about" class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">About Me</h2>
+            <p class="text-justify text-lg">
+                Hi, I'm Darrel, a <span id="age"></span> year old game developer passionate about creating engaging and interactive
+                experiences through code. I enjoy tackling both gameplay mechanics and technical challenges like algorithm
+                development and recreating existing game mechanics, and I'm always excited to learn and improve!
+            </p>
+        </section>
 
-		<!-- Projects -->
-		<section id="projects" class="mb-12">
-			<h2 class="text-2xl font-bold mb-4">Projects</h2>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-stretch">
-				<!-- Water -->
-				<ProjectCard 
-					image="/images/Water.gif" 
-					altText="Water Simulation Project Image" 
-					title="Water Simulation" 
-					description="An attempt to create a simple simulation of waves using Unity's Shader Language, implementing Sum of Sines and Lambertian Diffuse lighting."
-					tech="Unity, C#"
-					details="Introductory shader programming project."
-				/>
+        <!-- Projects -->
+        <section id="projects" class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-stretch">
+                <!-- Water -->
+                <ProjectCard
+                    image="/images/Water.gif"
+                    altText="Water Simulation Project Image"
+                    title="Water Simulation"
+                    description="An attempt to create a simple simulation of waves using Unity's Shader Language, implementing Sum of Sines and Lambertian Diffuse lighting."
+                    tech="Unity, C#"
+                    details="Introductory shader programming project."
+                />
 
-				<!-- Pokemon Battle System Clone -->
-				<ProjectCard 
-					image="/images/Pokemon.gif" 
-					altText="Pokemon Battle System Clone Project Image" 
-					title="Pokemon Battle System Clone" 
-					description="A simplified recreation of Pokemon's Generation 1 battle system."
-					tech="Unity, C#"
-					details="Learned Unity's custom inspector and how to create/edit Scriptable Objects programmatically."
-				/>
-				
-				<!-- A Byte-Sized Museum -->
-				<ProjectCard 
-					image="/images/AByteSizedMuseum.png" 
-					altText="A Byte-Sized Museum Project Image" 
-					title="A Byte-Sized Museum" 
-					description="A Game-Based Learning application that introduces computer programming concepts using Wave Function Collapse for procedural generation."
-					tech="Unity, C#"
-					details="3D game project developed for my Thesis."
-				/>
+                <!-- Pokemon Battle System Clone -->
+                <ProjectCard
+                    image="/images/Pokemon.gif"
+                    altText="Pokemon Battle System Clone Project Image"
+                    title="Pokemon Battle System Clone"
+                    description="A simplified recreation of Pokemon's Generation 1 battle system."
+                    tech="Unity, C#"
+                    details="Learned Unity's custom inspector and how to create/edit Scriptable Objects programmatically."
+                />
 
-				<!-- Python WFC -->
-				<ProjectCard 
-				image="/images/WFC_Python.png" 
-				altText="Wave Function Collapse Algorithm Project Image" 
-				title="Wave Function Collapse Algorithm" 
-				description="A Python-based implementation of the Tile-Based Wave Function Collapse Algorithm"
-				tech="Python, Pygame, Numpy"
-				details="Served as a prototype for testing for my final Thesis output."
-				/>
+                <!-- A Byte-Sized Museum -->
+                <ProjectCard
+                    image="/images/AByteSizedMuseum.png"
+                    altText="A Byte-Sized Museum Project Image"
+                    title="A Byte-Sized Museum"
+                    description="A Game-Based Learning application that introduces computer programming concepts using Wave Function Collapse for procedural generation."
+                    tech="Unity, C#"
+                    details="3D game project developed for my Thesis."
+                />
 
-				<!-- PCDefender -->
-				<ProjectCard 
-					image="/images/PCDefender.png" 
-					altText="PCDefender Project Image" 
-					title="PCDefender" 
-					description="A 2D Tower Defense game where you play as a computer's Antivirus Software defending against waves of computer malware."
-					tech="Unity, C#"
-					details="Made in 5 days for a University Hackathon."
-				/>
+                <!-- Python WFC -->
+                <ProjectCard
+                    image="/images/WFC_Python.png"
+                    altText="Wave Function Collapse Algorithm Project Image"
+                    title="Wave Function Collapse Algorithm"
+                    description="A Python-based implementation of the Tile-Based Wave Function Collapse Algorithm"
+                    tech="Python, Pygame, Numpy"
+                    details="Served as a prototype for testing for my final Thesis output."
+                />
 
-				<!-- Scatter -->
-				<ProjectCard 
-					image="/images/Scatter.png" 
-					altText="Scatter Project Image" 
-					title="Scatter" 
-					description="A 2D RTS game where survival depends on real-time resource scavenging."
-					tech="Unity, C#"
-					details="Made in 2 weeks with a friend for the Pirate Software Game Jam 14 (Jan 12, 2024 – Jan 27, 2024)."
-				/>
+                <!-- PCDefender -->
+                <ProjectCard
+                    image="/images/PCDefender.png"
+                    altText="PCDefender Project Image"
+                    title="PCDefender"
+                    description="A 2D Tower Defense game where you play as a computer's Antivirus Software defending against waves of computer malware."
+                    tech="Unity, C#"
+                    details="Made in 5 days for a University Hackathon."
+                />
 
-				<!-- Genetic Algorithm -->
-				<ProjectCard 
-					image="/images/GeneticAlgorithm.png" 
-					altText="Genetic Algorithm Project Image" 
-					title="Genetic Algorithm for Solving a Multiple Variable Combinatorial Optimization Problem" 
-					description="A Python-based program using a Genetic Algorithm to solve a multi-variable combinatorial optimization problem."
-					tech="Python, Numpy, Pandas, Matplotlib"
-					details="Made alongside a research manuscript of the same title as a final project for my Discrete Structures 2 course."
-				/>
-			</div>
-		</section>
+                <!-- Scatter -->
+                <ProjectCard
+                    image="/images/Scatter.png"
+                    altText="Scatter Project Image"
+                    title="Scatter"
+                    description="A 2D RTS game where survival depends on real-time resource scavenging."
+                    tech="Unity, C#"
+                    details="Made in 2 weeks with a friend for the Pirate Software Game Jam 14 (Jan 12, 2024 – Jan 27, 2024)."
+                />
 
-		<!-- Contact -->
-		<section id="contact">
-			<h2 class="text-2xl font-bold text-gray-100 mb-4">Contact</h2>
-			<p class="text-gray-400">
-				Feel free to reach out to me at <a href="mailto:darreltraballo1121@gmail.com" class="text-blue-400 hover:underline">darreltraballo1121@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/darrel-traballo" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-			</p>
-		</section>
-	</div>
+                <!-- Genetic Algorithm -->
+                <ProjectCard
+                    image="/images/GeneticAlgorithm.png"
+                    altText="Genetic Algorithm Project Image"
+                    title="Genetic Algorithm for Solving a Multiple Variable Combinatorial Optimization Problem"
+                    description="A Python-based program using a Genetic Algorithm to solve a multi-variable combinatorial optimization problem."
+                    tech="Python, Numpy, Pandas, Matplotlib"
+                    details="Made alongside a research manuscript of the same title as a final project for my Discrete Structures 2 course."
+                />
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2 class="text-2xl font-bold text-gray-100 mb-4">Contact</h2>
+            <p class="text-gray-400">
+                Feel free to reach out to me at <a href={emailLink} class="text-blue-400 hover:underline">
+                    darreltraballo1121@gmail.com
+                </a> or connect with me on <a
+                    href={linkedInLink}
+                    class="text-blue-400 hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+            </p>
+        </section>
+    </main>
 </Layout>
+
+<script>
+    const dob = new Date("11/21/2002")
+    var diff_ms = Date.now() - dob.getTime()
+    var age = Math.abs(new Date(diff_ms).getUTCFullYear() - 1970)
+    document.querySelector("#age").textContent = age.toString()
+</script>
