@@ -1,15 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import ProjectCard from "../components/ProjectCard.astro"
+import SkillsSection from "../components/SkillsSection.astro"
 
-const Title = "Railee Darrel Traballo - Game Developer Portfolio"
+const isLocal = import.meta.env.MODE === "development"
+const pageTitle = isLocal
+    ? "[LOCAL] Railee Darrel Traballo - Game Developer Portfolio"
+    : "Railee Darrel Traballo - Game Developer Portfolio"
 
 // links
 const emailLink = "mailto:darreltraballo1121@gmail.com"
 const linkedInLink = "https://www.linkedin.com/in/darrel-traballo"
 ---
 
-<Layout title={Title}>
+<Layout title={pageTitle}>
     <!-- Header -->
     <div class="container mx-auto text-center">
         <h1 class="text-5xl px-8 py-4 font-bold">Railee Darrel Traballo</h1>
@@ -21,11 +25,14 @@ const linkedInLink = "https://www.linkedin.com/in/darrel-traballo"
         <section id="about" class="mb-12">
             <h2 class="text-2xl font-bold mb-4">About Me</h2>
             <p class="text-justify text-lg">
-                Hi, I'm Darrel, a <span id="age"></span> year old game developer passionate about creating engaging and interactive
-                experiences through code. I enjoy tackling both gameplay mechanics and technical challenges like algorithm
-                development and recreating existing game mechanics, and I'm always excited to learn and improve!
+                Yo, I'm Darrel, and I'm a <span id="age"></span> year old game developer passionate about creating engaging
+                and interactive experiences through code. I enjoy tackling both gameplay mechanics and technical challenges
+                like algorithm development and recreating existing game mechanics, and I'm always excited to learn and improve!
             </p>
         </section>
+
+        <!-- Skills -->
+        <SkillsSection />
 
         <!-- Projects -->
         <section id="projects" class="mb-12">

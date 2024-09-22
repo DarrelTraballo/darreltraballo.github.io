@@ -1,23 +1,25 @@
 ---
 interface Props {
-    image?: string;
-    altText?: string;
-    title?: string;
-    tech?: string;
-    description?: string;
-    details?: string;
+    image?: string
+    altText?: string
+    title?: string
+    tech?: string
+    description?: string
+    details?: string
 }
-const { image = "/images/placeholder.png", 
-        altText = "Placeholder Image", 
-        title = "mincecarft", 
-        tech = "Tech", 
-        description = "Placeholder Description", 
-        details = "Placeholder Details"  
-} = Astro.props;
+const {
+    image = "/images/placeholder.png",
+    altText = "Placeholder Image",
+    title = "mincecarft",
+    tech = "Tech",
+    description = "Placeholder Description",
+    details = "Placeholder Details",
+} = Astro.props
 ---
+
 <!-- project card -->
 <div class="bg-gray-800 shadow-md rounded-lg overflow-hidden flex flex-col">
-    <img src={image} alt={altText} class="w-full h-auto rounded-lg object-cover">
+    <img src={image} alt={altText} class="w-full h-auto rounded-lg object-cover" />
     <!-- card contents -->
     <div class="p-4 flex flex-col flex-grow">
         <h3 class="text-xl font-bold mb-2">{title}</h3>

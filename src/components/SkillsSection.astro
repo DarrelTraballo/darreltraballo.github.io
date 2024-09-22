@@ -1,0 +1,47 @@
+---
+const skills = [
+    {
+        // split into two parts: "Preferred Languages" and "Other known Languages"
+        // but not yet since there aren't a lot yet xdd
+        category: "Languages",
+        items: ["C#", "Python", "Javascript"],
+    },
+    {
+        category: "Game Development",
+        items: ["Unity", "Shader Programming", "Pygame"],
+    },
+    {
+        category: "Web Development",
+        items: ["Astro", "React (learning)", "Tailwind CSS"],
+    },
+    {
+        category: "Data Analysis & Visualization",
+        items: ["Numpy", "Pandas", "Matplotlib"],
+    },
+    {
+        category: "Agorithm Development",
+        items: ["Genetic Algorithms", "Procedural Generation"],
+    },
+]
+---
+
+<section class="bg-gray-800 py-12 mb-12">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-semibold text-white mb-8">Skills</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
+            {
+                skills.map((skill) => (
+                    <div class="bg-gray-700 rounded-lg p-6">
+                        <h3 class="text-xl text-white font-bold mb-4">{skill.category}</h3>
+                        <ul class="text-gray-300">
+                            {skill.items.map((item) => (
+                                <li class="mb-2">• {item}</li>
+                            ))}
+                        </ul>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>
