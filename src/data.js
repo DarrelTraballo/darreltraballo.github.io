@@ -97,5 +97,14 @@ export const data = {
             items: ["Genetic Algorithms", "Procedural Generation"],
         },
     ],
-    
+    professional_experience:[],
+    education: [
+        {
+            title: "Bachelor of Computer Science",
+            major: "Application Development Elective Track",
+            institution: "University of Makati",
+            location: "Makati City, Metro Manila, Philippines",
+            date: "2020 - 2024",
+        },
+    ],
 }
