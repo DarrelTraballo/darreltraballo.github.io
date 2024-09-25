@@ -1,28 +1,6 @@
 ---
-const skills = [
-    {
-        // split into two parts: "Preferred Languages" and "Other known Languages"
-        // but not yet since there aren't a lot yet xdd
-        category: "Languages",
-        items: ["C#", "Python", "Javascript"],
-    },
-    {
-        category: "Game Development",
-        items: ["Unity", "Shader Programming", "Pygame"],
-    },
-    {
-        category: "Web Development",
-        items: ["Astro", "React (learning)", "Tailwind CSS"],
-    },
-    {
-        category: "Data Analysis & Visualization",
-        items: ["Numpy", "Pandas", "Matplotlib"],
-    },
-    {
-        category: "Agorithm Development",
-        items: ["Genetic Algorithms", "Procedural Generation"],
-    },
-]
+import { data } from "../data.js"
+const skills = data.skills
 ---
 
 <section class="bg-gray-800 py-12 mb-12">
