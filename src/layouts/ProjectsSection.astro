@@ -1,16 +1,16 @@
 ---
-import ProjectModal from "../components/ProjectModal.jsx"
+import ProjectCard from "../components/ProjectCard.jsx"
 import { data } from "../data.js"
 
 const projects = data.projects
 ---
 
 <section id="projects" class="mb-12">
-    <h2 class="text-2xl font-bold mb-4">Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-stretch">
+    <h2 class="text-3xl font-bold mb-4">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch px-4">
         {
             projects.map((project) => (
-                <ProjectModal
+                <ProjectCard
                     title={project.title}
                     tech={project.tech}
                     description={project.description}

@@ -78,7 +78,7 @@ export const data = {
             // split into two parts: "Preferred Languages" and "Other known Languages"
             // but not yet since there aren't a lot yet xdd
             category: "Languages",
-            items: ["C#", "Python", "Javascript"],
+            items: ["C#", "Python", "Java", "Javascript"],
         },
         {
             category: "Game Development",
