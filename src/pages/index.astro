@@ -6,10 +6,7 @@ import ProjectsSection from "../layouts/ProjectsSection.astro"
 import Education from "../layouts/EducationSection.astro"
 import ContactMeSection from "../layouts/ContactMeSection.astro"
 
-const isLocal = import.meta.env.MODE === "development"
-const pageTitle = isLocal
-    ? "[LOCAL] Railee Darrel Traballo - Game Developer Portfolio"
-    : "Railee Darrel Traballo - Game Developer Portfolio"
+const pageTitle = "Railee Darrel Traballo - Game Developer Portfolio"
 ---
 
 <Layout title={pageTitle}>
