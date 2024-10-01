@@ -1,20 +1,22 @@
 ---
-import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar"
 ---
 
+<!-- TODO: 3 columns: My name       Home Projects       Contact 
+     TODO: Contacts more preferably use icons then add link to them or something -->
 <header class="lg:flex px-20 py-5 gap-5">
     <Astronav>
-      <div class="flex w-full justify-between">
-        <div class="block lg:hidden">
-          <MenuIcon class="w-4 h-4 text-gray-800" />
+        <div class="flex w-full justify-between">
+            <div class="block lg:hidden">
+                <MenuIcon class="w-4 h-4 text-gray-800" />
+            </div>
         </div>
-      </div>
-      <MenuItems class="hidden lg:flex">
-        <ul class="flex flex-col lg:flex-row lg:gap-5">
-          <li><a href="#about" class="text-xl mx-4 hover:text-gray-300">About</a></li>
-          <li><a href="#projects" class="text-xl mx-4 hover:text-gray-300">Projects</a></li>
-          <li><a href="#contact" class="text-xl mx-4 hover:text-gray-300">Contact</a></li>
-        </ul>
-      </MenuItems>
+        <MenuItems class="hidden lg:flex">
+            <ul class="flex flex-col lg:flex-row lg:gap-5">
+                <li><a href="#about" class="text-xl mx-4 hover:text-gray-300">About</a></li>
+                <li><a href="#projects" class="text-xl mx-4 hover:text-gray-300">Projects</a></li>
+                <li><a href="#contact" class="text-xl mx-4 hover:text-gray-300">Contact</a></li>
+            </ul>
+        </MenuItems>
     </Astronav>
 </header>

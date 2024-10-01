@@ -1,19 +1,33 @@
 ---
 import { data } from "../data.js"
-const skills = data.technologies
+const skills = data.skills
+const technologies = data.technologies
 ---
 
 <section class="py-12 mb-12">
-    <div class="container mx-auto">
-        <h2 class="text-3xl font-semibold mb-8">Skills and Technologies</h2>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 text-center gap-6 px-4">
+    <h2 class="text-3xl font-semibold mb-8">Skills and Technologies</h2>
+    <div class="grid grid-cols-2 mx-auto px-28">
+        <div class="grid grid-cols-1 gap-6 px-4">
             {
                 skills.map((skill) => (
                     <div class="bg-secondary-bg rounded-lg p-6">
                         <h3 class="text-xl font-bold mb-4">{skill.category}</h3>
-                        <ul>
+                        <ul class="list-disc list-inside">
                             {skill.items.map((item) => (
+                                <li class="mb-2">{item}</li>
+                            ))}
+                        </ul>
+                    </div>
+                ))
+            }
+        </div>
+        <div class="grid grid-cols-1 gap-6 px-4">
+            {
+                technologies.map((technology) => (
+                    <div class="bg-secondary-bg rounded-lg p-6">
+                        <h3 class="text-xl font-bold mb-4">{technology.category}</h3>
+                        <ul class="list-disc list-inside">
+                            {technology.items.map((item) => (
                                 <li class="mb-2">{item}</li>
                             ))}
                         </ul>

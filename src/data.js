@@ -91,16 +91,24 @@ export const data = {
             ]
         }
     ],
-    technologies: [
+    skills: [
         {
-            // split into two parts: "Preferred Languages" and "Other known Languages"
-            // but not yet since there aren't a lot yet xdd
-            category: "Languages",
-            items: ["C#", "Python", "Java", "Javascript"],
+            category: "Preferred Languages",
+            items: ["C#", "Java"],
         },
+        {
+            category: "Other Known Languages",
+            items: ["Python", "Javasript", "PHP"],
+        },
+    ],
+    technologies: [
         {
             category: "Game Development",
             items: ["Unity", "Shader Programming", "Pygame"],
+        },
+        {
+            category: "Agorithm Development",
+            items: ["Genetic Algorithms", "Procedural Generation"],
         },
         {
             category: "Web Development",
@@ -109,10 +117,6 @@ export const data = {
         {
             category: "Data Analysis & Visualization",
             items: ["Numpy", "Pandas", "Matplotlib"],
-        },
-        {
-            category: "Agorithm Development",
-            items: ["Genetic Algorithms", "Procedural Generation"],
         },
     ],
     professional_experience:[],
