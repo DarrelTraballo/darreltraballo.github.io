@@ -87,6 +87,7 @@ export const data = {
             description: "An attempt to recreate Minecraft's Ender Dragon AI in Unity.",
             tech: ["Unity", "C#"],
             details: [
+                "Ender Dragon's behavior patterns were created to be as close to the original game as possible",
                 "Learned how to implement enemy AI behavior using State Machines to manage the Ender Dragon's behavior patterns."
             ]
         }

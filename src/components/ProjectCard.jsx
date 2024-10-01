@@ -17,11 +17,11 @@ export default function ProjectCard({title, description, imageSrc, techs, detail
                         ))}
                     </p>
                     <p className="text-secondary-font mb-4">{description}</p>
-                    <p className="text-sm text-tertiary-font mt-auto">
+                    <ul className="text-sm text-tertiary-font mt-auto list-disc list-inside">
                         {details.map((detail) => (
-                            <p className="text-sm text-tertiary-font mt-auto">{detail}</p>
+                            <li  className="text-sm text-tertiary-font py-1">{detail}</li>
                         ))}
-                    </p>
+                    </ul>
                 </div>
             </div>
         </>
