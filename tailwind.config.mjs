@@ -6,6 +6,7 @@ export default {
 			colors: {
 				'primary-bg': '#111827',
 				'secondary-bg': '#1f2937',
+				'tertiary-bg': '#9AA899',
 
 				'primary-font': '#ffffff',
 				'secondary-font': '#9ca3af',

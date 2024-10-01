@@ -3,7 +3,8 @@ export const data = {
         {
             id: "1",
             title: "Water Simulation",
-            imageSrc: "/images/Water.gif",
+            tag: "Game Development",
+            imageSrc: "/images/projects/Water.gif",
             description: "An attempt to create a simple simulation of waves using Unity's Shader Language, implementing Sum of Sines and Lambertian Diffuse lighting.",
             tech: ["Unity", "C#"],
             details: [
@@ -13,7 +14,8 @@ export const data = {
         {
             id: "2",
             title: "Pokemon Battle System Clone",
-            imageSrc: "/images/Pokemon.gif",
+            tag: "Game Development",
+            imageSrc: "/images/projects/Pokemon.gif",
             description: "A simplified recreation of Pokemon's Generation 1 battle system.",
             tech: ["Unity", "C#"],
             details: [
@@ -25,7 +27,8 @@ export const data = {
         {
             id: "3",
             title: "A Byte-Sized Museum",
-            imageSrc: "/images/AByteSizedMuseum.png",
+            tag: "Game Development",
+            imageSrc: "/images/projects/AByteSizedMuseum.png",
             description: "A Game-Based Learning application that introduces computer programming concepts using Wave Function Collapse for procedural generation.",
             tech: ["Unity", "C#"],
             details: [
@@ -35,7 +38,8 @@ export const data = {
         {
             id: "4",
             title: "Wave Function Collapse Algorithm",
-            imageSrc: "/images/WFC_Python.png",
+            tag: "Game Development",
+            imageSrc: "/images/projects/WFC_Python.png",
             description: "A Python-based implementation of the Tile-Based Wave Function Collapse Algorithm",
             tech: ["Python", "Pygame", "Numpy"],
             details: [
@@ -45,7 +49,8 @@ export const data = {
         {
             id: "5",
             title: "PCDefender",
-            imageSrc: "/images/PCDefender.png",
+            tag: "Game Development",
+            imageSrc: "/images/projects/PCDefender.png",
             description: "A 2D Tower Defense game where you play as a computer's Antivirus Software defending against waves of computer malware.",
             tech: ["Unity", "C#"],
             details: [
@@ -55,7 +60,8 @@ export const data = {
         {
             id: "6",
             title: "Scatter",
-            imageSrc: "/images/Scatter.png",
+            tag: "Game Development",
+            imageSrc: "/images/projects/Scatter.png",
             description: "A 2D RTS game where survival depends on real-time resource scavenging.",
             tech: ["Unity", "C#"],
             details: [
@@ -65,13 +71,25 @@ export const data = {
         {
             id: "7",
             title: "Genetic Algorithm for Solving a Multiple Variable Combinatorial Optimization Problem",
-            imageSrc: "/images/GeneticAlgorithm.png",
+            tag: "Others",
+            imageSrc: "/images/projects/GeneticAlgorithm.png",
             description: "A Python-based program using a Genetic Algorithm to solve a multi-variable combinatorial optimization problem.",
             tech: ["Python", "Numpy", "Pandas", "Matplotlib"],
             details: [
                 "Made alongside a research manuscript of the same title as a final project for my Discrete Structures 2 course."
             ],
         },
+        {
+            id: "8",
+            title: "Ender Dragon AI Clone",
+            tag: "Game Development",
+            imageSrc: "",
+            description: "An attempt to recreate Minecraft's Ender Dragon AI in Unity.",
+            tech: ["Unity", "C#"],
+            details: [
+                "Learned how to implement enemy AI behavior using State Machines to manage the Ender Dragon's behavior patterns."
+            ]
+        }
     ],
     technologies: [
         {

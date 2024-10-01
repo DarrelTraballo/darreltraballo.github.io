@@ -1,0 +1,33 @@
+---
+import Tag from "../components/Tag.jsx"
+import ImageCard from "../components/ImageCard.jsx"
+---
+
+<section id="home" class="mb-12 mx-24">
+    <div class="grid grid-cols-2 gap-10">
+        <div class="">
+            <h1 class="text-5xl py-4 font-bold">Yo, I'm <br /> Darrel Traballo</h1>
+            <p class="text-justify text-base">
+                I'm a <span id="age"></span> year old game developer from Mandaluyong City, Philippines. I'm passionate about
+                creating engaging and interactive experiences through code. I enjoy tackling both gameplay mechanics and
+                technical challenges like algorithm development and recreating existing game mechanics, and I'm always excited
+                to learn and improve!
+            </p>
+            <div class="py-2">
+                <Tag label="Game Developer" />
+                <Tag label="Unity" />
+            </div>
+        </div>
+        <div class="text-center">
+            <ImageCard imageSrc={""} altText={"Darrel Traballo"} />
+        </div>
+    </div>
+</section>
+<hr class="bg-secondary-bg" />
+
+<script>
+    const dob = new Date("11/21/2002")
+    var diff_ms = Date.now() - dob.getTime()
+    var age = Math.abs(new Date(diff_ms).getUTCFullYear() - 1970)
+    document.querySelector("#age").textContent = age.toString()
+</script>

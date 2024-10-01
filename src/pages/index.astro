@@ -1,25 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import AboutMeSection from "../layouts/AboutMeSection.astro"
+import Header from "../layouts/Header.astro"
 import SkillsSection from "../layouts/SkillsSection.astro"
 import ProjectsSection from "../layouts/ProjectsSection.astro"
 import Education from "../layouts/EducationSection.astro"
 import ContactMeSection from "../layouts/ContactMeSection.astro"
 
-const pageTitle = "Railee Darrel Traballo - Game Developer Portfolio"
+const pageTitle = "Darrel Traballo: Game Developer"
 ---
 
 <Layout title={pageTitle}>
     <!-- Header -->
-    <div class="text-center">
-        <h1 class="text-5xl px-8 py-4 font-bold">Railee Darrel Traballo</h1>
-        <p class="text-lg pb-4">Game Developer</p>
-    </div>
+    <Header />
 
     <!-- Body -->
-    <div class="">
+    <div>
         <!-- About Me -->
-        <AboutMeSection />
 
         <!-- Skills -->
         <SkillsSection />
