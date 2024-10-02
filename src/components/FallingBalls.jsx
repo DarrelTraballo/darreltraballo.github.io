@@ -5,6 +5,12 @@ const FallingBalls = () => {
     const sceneRef = useRef(null)
     const engineRef = useRef(Matter.Engine.create())
     const groundRef = useRef(null)
+    const leftWallRef = useRef(null)
+    const rightWallRef = useRef(null)
+    const ballsRef = useRef([])
+
+    const ballsAmount = 50
+    const scrollSpeedMultiplier = 0.05
 
     useEffect(() => {
         const { Engine, Render, Runner, Bodies, Composite, Body } = Matter
@@ -21,18 +27,21 @@ const FallingBalls = () => {
             },
         })
 
-        const leftWall = Bodies.rectangle(0, window.innerHeight / 2, 10, window.innerHeight, { isStatic: true })
-        const rightWall = Bodies.rectangle(window.innerWidth, window.innerHeight / 2, 10, window.innerHeight, { isStatic: true })
-        
-        groundRef.current = Bodies.rectangle(
-            window.innerWidth / 2, 
-            window.innerHeight + 50, 
-            window.innerWidth, 
-            100, 
-            { isStatic: true, }
-        )
+        const createWalls = () => {
+            leftWallRef.current = Bodies.rectangle(0, window.innerHeight / 2, 10, window.innerHeight * 2, { isStatic: true })
+            rightWallRef.current = Bodies.rectangle(window.innerWidth, window.innerHeight / 2, 10, window.innerHeight * 2, { isStatic: true })
+            groundRef.current = Bodies.rectangle(
+                window.innerWidth / 2, 
+                window.innerHeight + 50, 
+                window.innerWidth, 
+                100, 
+                { isStatic: true, }
+            )
 
-        Composite.add(engine.world, [groundRef.current, leftWall, rightWall])
+            Composite.add(engine.world, [groundRef.current, leftWallRef.current, rightWallRef.current])
+        }
+
+        createWalls()
 
         const createBall = () => {
             const size = Math.random() * 40 + 20
@@ -45,14 +54,15 @@ const FallingBalls = () => {
                         fillStyle: `hsl(${Math.random() * 360}, 100%, 50%)`,
                     },
                     friction: 0.3,
-                    restitution: 0.8,
+                    restitution: 1,
                 }
             )
-
+            
+            ballsRef.current.push(ball)
             Composite.add(engine.world, [ball])
         }
 
-        for (let i = 0; i < 50; i++) {
+        for (let i = 0; i < ballsAmount; i++) {
             createBall()
         }
 
@@ -62,15 +72,47 @@ const FallingBalls = () => {
         const runner = Runner.create()
         Runner.run(runner, engine)
 
-        const handleScroll = () => {
-            const scrollY = window.scrollY
-            const visibleHeight = window.innerHeight
-            const newGround = scrollY + visibleHeight + 50
+        let lastScrollY = window.scrollY
+        let scrollVelocity = 0
 
-            Body.setPosition(groundRef.current, { x: window.innerWidth / 2, y: newGround })
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY
+            scrollVelocity = currentScrollY - lastScrollY
+            lastScrollY = currentScrollY
+
+            ballsRef.current.forEach(ball => {
+                Body.setVelocity(ball, { 
+                    x: ball.velocity.x, 
+                    y: ball.velocity.y - scrollVelocity * scrollSpeedMultiplier 
+                })
+            })
+        }
+
+        const handleResize = () => {
+            render.canvas.width = window.innerWidth
+            render.canvas.height = window.innerHeight
+
+            Body.setPosition(groundRef.current, { x: window.innerWidth / 2, y: window.innerHeight })
+            Body.setPosition(leftWallRef.current, { x: 0, y: window.innerHeight / 2 })
+            Body.setPosition(rightWallRef.current, { x: window.innerWidth, y: window.innerHeight / 2 })
+
+            Body.setVertices(groundRef.current, Bodies.rectangle(window.innerWidth / 2, window.innerHeight, window.innerWidth, 100).vertices)
+            Body.setVertices(leftWallRef.current, Bodies.rectangle(0, window.innerHeight / 2, 10, window.innerHeight).vertices)
+            Body.setVertices(rightWallRef.current, Bodies.rectangle(window.innerWidth, window.innerHeight / 2, 10, window.innerHeight).vertices)
         }
 
         window.addEventListener('scroll', handleScroll)
+        window.addEventListener('resize', handleResize)
+
+//         const handleScroll = () => {
+//             const scrollY = window.scrollY
+//             const visibleHeight = window.innerHeight
+//             const newGround = scrollY + visibleHeight
+// 
+//             Body.setPosition(groundRef.current, { x: window.innerWidth / 2, y: newGround + 50 })
+//         }
+// 
+//         window.addEventListener('scroll', handleScroll)
 
         return () => {
             Render.stop(render)
@@ -78,6 +120,7 @@ const FallingBalls = () => {
             Composite.clear(engine.world, false)
             Engine.clear(engine)
             window.removeEventListener('scroll', handleScroll)
+            window.removeEventListener('resize', handleResize)
         }
 
     }, [])
@@ -85,7 +128,7 @@ const FallingBalls = () => {
     return ( 
         <div 
             ref={sceneRef} 
-            className='absolute inset-0 -z-10'
+            className='fixed inset-0 -z-10 opacity-25 h-full'
             style={{overflow: 'hidden'}}
         />
     )
