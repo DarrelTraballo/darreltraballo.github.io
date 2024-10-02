@@ -5,7 +5,7 @@ export default function ImageCard({ imageSrc, altText }) {
 
     return (
         <div className="rounded-lg shadow-md p-4">
-            <img src={imageSrc} alt={altText} className="w-full h-auto rounded-lg object-cover" />
+            <img src={imageSrc} alt={altText} className="w-full h-auto rounded-full object-cover" />
         </div>
     )
 }

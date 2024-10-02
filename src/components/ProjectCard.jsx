@@ -1,6 +1,6 @@
 import Tag from "./Tag"
 
-export default function ProjectCard({title, description, imageSrc, techs, details}) {
+export default function ProjectCard({title, tag, description, imageSrc, techs, details}) {
     if (imageSrc === "") {
         imageSrc = "/images/projects/placeholder.png"
     }
@@ -11,11 +11,11 @@ export default function ProjectCard({title, description, imageSrc, techs, detail
                 <img src={imageSrc} alt={title} className="w-full h-auto rounded-lg object-cover" />
                 <div className="p-4 flex flex-col flex-grow">
                     <h3 className="text-xl font-bold mb-2">{title}</h3>
-                    <p className="text-sm text-secondary-font mb-2">
+                    <div className="flex flex-wrap justify-center sm:justify-start mb-2">
                         {techs.map(tech => (
                             <Tag label={tech} />
                         ))}
-                    </p>
+                    </div>
                     <p className="text-secondary-font mb-4">{description}</p>
                     <ul className="text-sm text-tertiary-font mt-auto list-disc list-inside">
                         {details.map((detail) => (
