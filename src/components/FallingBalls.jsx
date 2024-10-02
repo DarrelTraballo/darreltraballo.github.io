@@ -28,8 +28,8 @@ const FallingBalls = () => {
         })
 
         const createWalls = () => {
-            leftWallRef.current = Bodies.rectangle(0, window.innerHeight / 2, 10, window.innerHeight * 2, { isStatic: true })
-            rightWallRef.current = Bodies.rectangle(window.innerWidth, window.innerHeight / 2, 10, window.innerHeight * 2, { isStatic: true })
+            leftWallRef.current = Bodies.rectangle(0, window.innerHeight / 2, 10, window.innerHeight * 10, { isStatic: true })
+            rightWallRef.current = Bodies.rectangle(window.innerWidth, window.innerHeight / 2, 10, window.innerHeight * 10, { isStatic: true })
             groundRef.current = Bodies.rectangle(
                 window.innerWidth / 2, 
                 window.innerHeight + 50, 
