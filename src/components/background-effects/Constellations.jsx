@@ -1,12 +1,13 @@
 import { canvas } from 'framer-motion/client'
 import React, { useEffect, useRef } from 'react'
 
-const DotGrid = () => {
+const Constellations = () => {
     const canvasRef = useRef(null)
     const maxDotSize = 7
     const minDotSize = 3
     const dots = []
     const dotCount = 10
+    const range = 100
 
     const createDots = (canvas) => {
         const spacingX = canvas.width / dotCount
@@ -20,10 +21,18 @@ const DotGrid = () => {
                     dx: Math.random() * 2 - 1,
                     dy: Math.random() * 2 - 1,
                     size: Math.random() * (maxDotSize - minDotSize) + minDotSize,
+                    range: range,
                 }
                 dots.push(dot)
             }
         }
+    }
+
+    const areDotsInRange = (dot1, dot2) => {
+        const dx = dot2.x - dot1.x
+        const dy = dot2.y - dot1.y
+        const distance = Math.sqrt(dx * dx + dy * dy)
+        return distance <= dot1.range
     }
 
     const updateDots = (ctx, canvas) => {
@@ -41,6 +50,19 @@ const DotGrid = () => {
             if (dot.x < 0 || dot.x > canvas.width) dot.dx *= -1
             if (dot.y < 0 || dot.y > canvas.height) dot.dy *= -1
         })
+
+        for (let i = 0; i < dots.length; i++) {
+            for (let j = i + 1; j < dots.length; j++) {
+                if (areDotsInRange(dots[i], dots[j])) {
+                    ctx.beginPath()
+                    ctx.moveTo(dots[i].x, dots[i].y)
+                    ctx.lineTo(dots[j].x, dots[j].y)
+                    ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)'
+                    ctx.stroke()
+                }
+            }
+        }
+
         requestAnimationFrame(() => updateDots(ctx, canvas))
     }
 
@@ -79,4 +101,4 @@ const DotGrid = () => {
     )
 }
 
-export default DotGrid
+export default Constellations
