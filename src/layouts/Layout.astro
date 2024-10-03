@@ -10,7 +10,7 @@ interface Props {
 const { title } = Astro.props
 
 const isLocal = import.meta.env.MODE === "development"
-const pageTitle = isLocal ? "[LOCAL] " + title : title
+const pageTitle = isLocal ? "[DEV] " + title : title
 ---
 
 <!doctype html>
