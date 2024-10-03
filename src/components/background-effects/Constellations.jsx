@@ -1,4 +1,3 @@
-import { canvas } from 'framer-motion/client'
 import React, { useEffect, useRef } from 'react'
 
 const Constellations = () => {
@@ -18,8 +17,8 @@ const Constellations = () => {
                 const dot = {
                     x: i * spacingX + spacingX / 2 + Math.random() * 100,
                     y: j * spacingY + spacingY / 2 + Math.random() * 100,
-                    dx: Math.random() * 2 - 1,
-                    dy: Math.random() * 2 - 1,
+                    dx: Math.random() * 1 - 0.5,
+                    dy: Math.random() * 1 - 0.5,
                     size: Math.random() * (maxDotSize - minDotSize) + minDotSize,
                     range: range,
                 }

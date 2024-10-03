@@ -1,4 +1,3 @@
-import { canvas } from 'framer-motion/client'
 import React, { useEffect, useRef } from 'react'
 
 const Delaunay = () => {
