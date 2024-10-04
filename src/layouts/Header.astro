@@ -1,21 +1,44 @@
 ---
 import Tag from "../components/Tag.jsx"
 import ImageCard from "../components/ImageCard.jsx"
+import { Icon } from "astro-iconify"
+
+const socialLinks = [
+    { name: "GitHub", icon: "mdi:github", url: "https://github.com/DarrelTraballo" },
+    { name: "LinkedIn", icon: "mdi:linkedin", url: "https://www.linkedin.com/in/darrel-traballo" },
+    { name: "Email", icon: "mdi:email", url: "mailto:darreltraballo1121@gmail.com" },
+]
 ---
 
 <section id="home" class="mb-12 mx-24">
     <div class="grid grid-cols-2 gap-10">
         <div class="">
-            <h1 class="text-5xl py-4 font-bold">Yo, I'm <br /> Darrel Traballo</h1>
+            <h1 class="text-5xl pt-4 font-bold">Yo, I'm <br /> Darrel Traballo</h1>
+            <div class="flex flex-wrap gap-2">
+                {
+                    socialLinks.map(({ name, icon, url }) => (
+                        <a
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="group flex items-center justify-center rounded-full py-2 text-primary-font transition-colors hover:text-tertiary-font"
+                            aria-label={name}>
+                            <Icon
+                                name={icon}
+                                class="w-4 h-4 text-primary-font transition-all group-hover:text-tertiary-font group-hover:scale-110 sm:h-8 sm:w-8 md:h-6 md:w-6"
+                            />
+                        </a>
+                    ))
+                }
+            </div>
             <p class="text-justify text-base">
-                I'm a <span id="age"></span> year old Game Developer from Mandaluyong City, Philippines. I'm passionate about
-                crafting engaging, interactive experiences through code. I thrive on tackling gameplay mechanics and technical
-                challenges, especially by recreating existing game systems to enhance my skills. Eager to apply my creativity
-                and technical expertise to innovative projects that push the boundaries of gaming.
+                I'm a <span id="age"></span> year old Game Developer who loves creating interactive experiences through code.
+                I specialize in solving gameplay and technical challenges, especially by recreating game systems to sharpen
+                my skills. I’m excited to apply my experience to projects that break new ground in gaming.
             </p>
-            <div class="py-2">
-                <Tag label="Game Developer" />
-                <Tag label="Unity" />
+            <div class="py-2 flex flex-wrap gap-2">
+                <Tag name="Game Developer" />
+                <Tag name="Unity" />
             </div>
         </div>
         <div class="text-center">
