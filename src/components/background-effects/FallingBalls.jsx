@@ -128,7 +128,6 @@ const FallingBalls = () => {
     return ( 
         <div 
             ref={sceneRef} 
-            className='fixed inset-0 -z-10 opacity-25 h-full'
             style={{overflow: 'hidden'}}
         />
     )
