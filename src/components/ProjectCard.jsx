@@ -7,7 +7,7 @@ export default function ProjectCard({title, tag, description, imageSrc, techs, d
 
     return (
         <>
-            <div className="bg-secondary-bg shadow-md rounded-lg overflow-hidden flex flex-col">
+            <div className="bg-secondary-bg bg-opacity-75 shadow-md rounded-lg overflow-hidden flex flex-col">
                 <img src={imageSrc} alt={title} className="w-full h-auto rounded-lg object-cover" />
                 <div className="p-4 flex flex-col flex-grow">
                     <h3 className="text-xl font-bold mb-2">{title}</h3>
