@@ -8,13 +8,16 @@ const socialLinks = [
     { name: "LinkedIn", icon: "mdi:linkedin", url: "https://www.linkedin.com/in/darrel-traballo" },
     { name: "Email", icon: "mdi:email", url: "mailto:darreltraballo1121@gmail.com" },
 ]
+
+const isLocal = import.meta.env.MODE === "development"
+const imageSrc = isLocal ? "/images/face/profile_pic.png" : "/images/face/grad-pic.JPG"
 ---
 
 <section id="home" class="mb-12 mx-2">
     <div class="grid grid-cols-2 gap-10 bg-gradient-to-b from-secondary-bg rounded-lg px-14 py-4">
         <div class="">
             <h1 class="text-5xl pt-4 font-bold">Yo, I'm <br /> Darrel Traballo</h1>
-            <div class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-2 pb-2">
                 {
                     socialLinks.map(({ name, icon, url }) => (
                         <a
@@ -42,7 +45,7 @@ const socialLinks = [
             </div>
         </div>
         <div class="text-center">
-            <ImageCard imageSrc={""} altText={"Darrel Traballo"} />
+            <ImageCard imageSrc={imageSrc} altText={"Darrel Traballo"} />
         </div>
     </div>
 </section>
