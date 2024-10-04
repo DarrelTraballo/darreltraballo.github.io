@@ -4,11 +4,14 @@ const DelaunayBackground = () => {
     const canvasRef = useRef(null);
     const maxDotSize = 7;
     const minDotSize = 3;
+    const dotSpeed = 0.25;
     const dots = [];
-    const dotCount = 10;
-    const spawnOffset = 200
+    const dotCount = 15;
+    const spawnOffset = 500
     const bgColor = '#0D745A'
     const gradientColor = '#50AC47'
+
+    const randomBetween = (min, max) => Math.random() * (max - min) + min
 
     // Hex to RGB conversion
     const hexToRgb = (hex) => {
@@ -48,6 +51,7 @@ const DelaunayBackground = () => {
     };
 
     // Calculate circumcircle determinant
+    // 2. Implement edge case handling in circumcircle function
     const circumcircle = (p1, p2, p3) => {
         const A = p2.x - p1.x;
         const B = p2.y - p1.y;
@@ -56,7 +60,10 @@ const DelaunayBackground = () => {
         const E = A * (p2.x + p1.x) + B * (p2.y + p1.y);
         const F = C * (p3.x + p1.x) + D * (p3.y + p1.y);
         const G = 2 * (A * (p3.y - p2.y) - B * (p3.x - p2.x));
-        if (G === 0) return null;
+        
+        // Handle edge case where G is very close to zero
+        if (Math.abs(G) < 1e-10) return null;
+        
         const centerX = (D * E - B * F) / G;
         const centerY = (A * F - C * E) / G;
         const radius = Math.sqrt(
@@ -73,12 +80,18 @@ const DelaunayBackground = () => {
         return dist < r;
     };
 
+    const isPointInBounds = (point, canvas) => {
+        const margin = 100; // Adjust as needed
+        return point.x >= -margin && point.x <= canvas.width + margin &&
+               point.y >= -margin && point.y <= canvas.height + margin;
+    };
+
     // Create Delaunay triangles
-    const delaunayTriangulation = (points) => {
+    const delaunayTriangulation = (points, canvas) => {
         const superTriangle = [
-            { x: -3000, y: -3000 },
-            { x: 5000, y: -3000 },
-            { x: 3000, y: 5000 }
+            { x: -15000, y: -15000 },
+            { x: 25000, y: -15000 },
+            { x: 15000, y: 25000 }
         ];
         let triangles = [superTriangle];
 
@@ -118,7 +131,8 @@ const DelaunayBackground = () => {
         });
 
         triangles = triangles.filter(
-            (t) => !superTriangle.some((p) => t.includes(p))
+            (t) => !superTriangle.some((p) => t.includes(p)) &&
+                   t.every(p => isPointInBounds(p, canvas))
         );
         return triangles;
     };
@@ -132,15 +146,20 @@ const DelaunayBackground = () => {
         for (let i = 0; i < dotCount; i++) {
             for (let j = 0; j < dotCount; j++) {
                 const dot = {
-                    x: i * spacingX + spacingX / 2 + Math.random() * 100 - spawnOffset,
-                    y: j * spacingY + spacingY / 2 + Math.random() * 100 - spawnOffset,
-                    dx: Math.random() * 1 - 0.5,
-                    dy: Math.random() * 1 - 0.5,
-                    size: Math.random() * (maxDotSize - minDotSize) + minDotSize,
+                    x: i * spacingX + spacingX / 2 + randomBetween(-spawnOffset, 100 - spawnOffset),
+                    y: j * spacingY + spacingY / 2 + randomBetween(-spawnOffset, 100 - spawnOffset),
+                    dx: randomBetween(-dotSpeed, dotSpeed),
+                    dy: randomBetween(-dotSpeed, dotSpeed),
+                    size: randomBetween(minDotSize, maxDotSize),
                 };
                 dots.push(dot);
             }
         }
+
+        dots.forEach(dot => {
+            dot.x = Math.max(-spawnOffset, Math.min(dot.x, canvas.width + spawnOffset));
+            dot.y = Math.max(-spawnOffset, Math.min(dot.y, canvas.height + spawnOffset));
+        });
     };
 
     const drawTriangles = (ctx, triangles, canvas) => {
@@ -169,13 +188,13 @@ const DelaunayBackground = () => {
             if (dot.y < -spawnOffset || dot.y > canvas.height + spawnOffset) dot.dy *= -1;
         });
 
-        const triangles = delaunayTriangulation(dots);
+        const triangles = delaunayTriangulation(dots, canvas);
         drawTriangles(ctx, triangles, canvas);
 
         dots.forEach((dot) => {
             ctx.beginPath();
             ctx.arc(dot.x, dot.y, dot.size, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+            ctx.fillStyle = 'rgba(255, 255, 255, 1)';
             ctx.fill();
         });
 

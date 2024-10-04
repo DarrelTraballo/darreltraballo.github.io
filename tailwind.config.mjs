@@ -5,12 +5,8 @@ export default {
 		extend: {
 			colors: {
 				'primary-bg': '#0D745A',
-				'secondary-bg': '#1f2937',
+				'secondary-bg': '#1A1B41',
 				'tertiary-bg': '#50AC47',
-
-				// Green
-				// #0D745A
-				// #50AC47
 
 				'primary-font': '#ffffff',
 				'secondary-font': '#9ca3af',
