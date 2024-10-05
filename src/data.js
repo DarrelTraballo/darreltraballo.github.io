@@ -113,7 +113,7 @@ export const data = {
         },
         {
             category: "Web Development",
-            items: ["Astro", "React (learning)", "Tailwind CSS"],
+            items: ["Astro", "React", "Tailwind CSS"],
         },
         {
             category: "Data Analysis & Visualization",
