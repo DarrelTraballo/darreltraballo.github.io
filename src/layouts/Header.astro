@@ -1,6 +1,5 @@
 ---
 import Tag from "../components/Tag.jsx"
-import ImageCard from "../components/ImageCard.jsx"
 import { Icon } from "astro-iconify"
 
 const socialLinks = [
@@ -13,11 +12,26 @@ const isLocal = import.meta.env.MODE === "development"
 const imageSrc = isLocal ? "/images/face/profile_pic.png" : "/images/face/grad-pic.JPG"
 ---
 
+<!-- Header.astro -->
 <section id="home" class="mb-12 mx-2">
-    <div class="grid grid-cols-2 gap-10 bg-gradient-to-b from-secondary-bg rounded-lg px-14 py-4">
-        <div class="">
-            <h1 class="text-5xl pt-4 font-bold">Yo, I'm <br /> Darrel Traballo</h1>
+    <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-10 bg-gradient-to-b from-secondary-bg rounded-lg px-6 md:px-14 py-8 justify-center">
+        <div class="order-2 md:order-1">
+            <h1 class="text-4xl md:text-5xl pt-4 font-bold">Yo, I'm <br /> Darrel Traballo</h1>
+
+            <div class="py-2 flex flex-wrap gap-2">
+                <Tag name="Game Developer" />
+                <Tag name="Unity" />
+            </div>
             <div class="flex flex-wrap gap-2 pb-2">
+                <Tag src="/images/icons/mdi--location.png" text="Mandaluyong City, Metro Manila, Philippines" />
+            </div>
+            <p class="text-justify text-sm md:text-base mt-4">
+                I'm a <span id="age"></span> year old Game Developer who loves creating interactive experiences through code.
+                I specialize in solving gameplay and technical challenges, especially by recreating game systems to sharpen
+                my skills. I’m excited to apply my experience to projects that break new ground in gaming.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-2">
                 {
                     socialLinks.map(({ name, icon, url }) => (
                         <a
@@ -28,24 +42,17 @@ const imageSrc = isLocal ? "/images/face/profile_pic.png" : "/images/face/grad-p
                             aria-label={name}>
                             <Icon
                                 name={icon}
-                                class="w-4 h-4 text-primary-font transition-all group-hover:text-tertiary-font group-hover:scale-110 sm:h-8 sm:w-8 md:h-6 md:w-6"
+                                class="w-6 h-6 text-primary-font transition-all group-hover:text-secondary-font group-hover:scale-110 sm:h-8 sm:w-8"
                             />
                         </a>
                     ))
                 }
             </div>
-            <p class="text-justify text-base">
-                I'm a <span id="age"></span> year old Game Developer who loves creating interactive experiences through code.
-                I specialize in solving gameplay and technical challenges, especially by recreating game systems to sharpen
-                my skills. I’m excited to apply my experience to projects that break new ground in gaming.
-            </p>
-            <div class="py-2 flex flex-wrap gap-2">
-                <Tag name="Game Developer" />
-                <Tag name="Unity" />
-            </div>
         </div>
-        <div class="text-center">
-            <ImageCard imageSrc={imageSrc} altText={"Darrel Traballo"} />
+        <div class="justify-self-center mt-8 md:mt-0 order-1 md:order-2">
+            <div class="rounded-full p-2">
+                <img src={imageSrc} alt={"Darrel Traballo"} class="w-auto h-auto rounded-full object-cover" />
+            </div>
         </div>
     </div>
 </section>

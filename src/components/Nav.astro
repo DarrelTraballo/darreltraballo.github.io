@@ -4,18 +4,34 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar"
 
 <!-- TODO: 3 columns: My name       Home Projects       Contact 
      TODO: Contacts more preferably use icons then add link to them or something -->
-<header class="lg:flex px-20 py-5 gap-5">
+<header class="px-5 py-3 lg:px-20 lg:py-5 lg:flex lg:gap-5">
     <Astronav>
         <div class="flex w-full justify-between">
             <div class="block lg:hidden">
-                <MenuIcon class="w-4 h-4 text-gray-800" />
+                <button id="menu-toggle" class="text-gray-800">
+                    <MenuIcon class="w-6 h-6" />
+                </button>
             </div>
         </div>
         <MenuItems class="hidden lg:flex">
             <ul class="flex flex-col lg:flex-row lg:gap-5">
-                <li><a href="/" class="text-xl mx-4 hover:text-gray-300">Home</a></li>
-                <li><a href="/#projects" class="text-xl mx-4 hover:text-gray-300">Projects</a></li>
+                <li><a href="/" class="text-lg mx-4 hover:text-gray-300">Home</a></li>
+                <li><a href="/#projects" class="text-lg mx-4 hover:text-gray-300">Projects</a></li>
             </ul>
         </MenuItems>
+
+        <div id="mobile-menu" class="hidden lg:hidden">
+            <ul class="flex flex-col gap-4 mt-4">
+                <li><a href="/" class="text-lg mx-4 hover:text-gray-300">Home</a></li>
+                <li><a href="/#projects" class="text-lg mx-4 hover:text-gray-300">Projects</a></li>
+            </ul>
+        </div>
     </Astronav>
 </header>
+
+<script>
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+        const mobileMenu = document.getElementById("mobile-menu")
+        mobileMenu.classList.toggle("hidden")
+    })
+</script>

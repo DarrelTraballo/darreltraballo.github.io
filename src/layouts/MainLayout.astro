@@ -14,12 +14,13 @@ const isLocal = import.meta.env.MODE === "development"
 const pageTitle = isLocal ? "[DEV] " + title : title
 ---
 
-<!doctype html>
+<!-- MainLayout.astro --><!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="description" content="Astro description" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/images/icons/mdi--gamepad-variant.svg" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
     </head>
@@ -30,7 +31,7 @@ const pageTitle = isLocal ? "[DEV] " + title : title
         </div>
         <div class="flex flex-col flex-grow">
             <Nav />
-            <main class="container max-w-8xl mx-auto flex-grow px-20 py-8">
+            <main class="container max-w-8xl mx-auto flex-grow px-4 sm:px-6 lg:px-20 py-8">
                 <slot />
             </main>
         </div>

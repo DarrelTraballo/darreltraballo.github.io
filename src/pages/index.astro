@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import MainLayout from "../layouts/MainLayout.astro"
 import Header from "../layouts/Header.astro"
 import SkillsSection from "../layouts/SkillsSection.astro"
 import ProjectsSection from "../layouts/ProjectsSection.astro"
@@ -9,7 +9,7 @@ import ContactMeSection from "../layouts/ContactMeSection.astro"
 const pageTitle = "Darrel Traballo: Game Developer"
 ---
 
-<Layout title={pageTitle}>
+<MainLayout title={pageTitle}>
     <!-- Header -->
     <Header />
 
@@ -24,4 +24,4 @@ const pageTitle = "Darrel Traballo: Game Developer"
         <!-- Education -->
         <Education />
     </div>
-</Layout>
+</MainLayout>

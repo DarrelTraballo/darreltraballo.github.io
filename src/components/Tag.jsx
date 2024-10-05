@@ -9,17 +9,18 @@ const icons = {
     "Game Development": "/images/icons/mdi--gamepad-variant.png",
     "Game Developer": "/images/icons/mdi--gamepad-variant.png",
 }
-
-export default function Tag({ name }) {
+// Tag.jsx
+export default function Tag({ name = "", src = "", text = "" }) {
     return (
         <div 
             key={`${name}`} 
-            className="flex items-center bg-tertiary-font/20 hover:bg-tertiary-font/30 text-primary-font rounded-full px-3 py-1.5 text-sm transition-colors duration-200 ease-in-out border border-tertiary-bg/30"
+            className="flex items-center bg-tertiary-font/20 hover:bg-tertiary-font/30 text-primary-font rounded-full px-2 py-1 sm:px-3 sm:py-1.5 text-xs sm:text-sm transition-colors duration-200 ease-in-out border border-tertiary-bg/30"
         >
-            {icons[name] && (
-                <img src={icons[name]} className="w-4 h-4 mr-2" alt={name}/>
+            {(src !== "" ? src : icons[name]) && (
+                <img src={src !== "" ? src : icons[name]} className="w-3 h-3 sm:w-4 sm:h-4 mr-2" alt={name}/>
             )}
-            <span>{name}</span>
+            <span>{(name !== "" ? name : text)}</span>
         </div>
     )
 }
+
