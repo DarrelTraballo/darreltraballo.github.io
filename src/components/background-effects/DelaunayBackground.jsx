@@ -84,7 +84,7 @@ const DelaunayBackground = () => {
     };
 
     const isPointInBounds = (point, canvas) => {
-        const margin = 100; // Adjust as needed
+        const margin = 500; // Adjust as needed
         return point.x >= -margin && point.x <= canvas.width + margin &&
                point.y >= -margin && point.y <= canvas.height + margin;
     };
@@ -92,9 +92,9 @@ const DelaunayBackground = () => {
     // Create Delaunay triangles
     const delaunayTriangulation = (points, canvas) => {
         const superTriangle = [
-            { x: -15000, y: -15000 },
-            { x: 25000, y: -15000 },
-            { x: 15000, y: 25000 }
+            { x: -20000, y: -20000 },
+            { x: 30000, y: -20000 },
+            { x: 20000, y: 30000 }
         ];
         let triangles = [superTriangle];
 
