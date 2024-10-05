@@ -8,6 +8,9 @@ const DelaunayBackground = () => {
     const dots = [];
     const dotCount = 15;
     const spawnOffset = 500
+    const minDirectionChangeInterval = 1000;
+    const maxDirectionChangeInterval = 4000;
+
     const bgColor = '#0D745A'
     const gradientColor = '#50AC47'
 
@@ -151,6 +154,8 @@ const DelaunayBackground = () => {
                     dx: randomBetween(-dotSpeed, dotSpeed),
                     dy: randomBetween(-dotSpeed, dotSpeed),
                     size: randomBetween(minDotSize, maxDotSize),
+                    directionChangeTime: randomBetween(minDirectionChangeInterval, maxDirectionChangeInterval),
+                    directionChangeTimer: 0,
                 };
                 dots.push(dot);
             }
@@ -160,6 +165,11 @@ const DelaunayBackground = () => {
             dot.x = Math.max(-spawnOffset, Math.min(dot.x, canvas.width + spawnOffset));
             dot.y = Math.max(-spawnOffset, Math.min(dot.y, canvas.height + spawnOffset));
         });
+    };
+
+    const updateDotDirection = (dot) => {
+        dot.dx = randomBetween(-dotSpeed, dotSpeed);
+        dot.dy = randomBetween(-dotSpeed, dotSpeed);
     };
 
     const drawTriangles = (ctx, triangles, canvas) => {
@@ -177,7 +187,7 @@ const DelaunayBackground = () => {
         });
     };
 
-    const updateDots = (ctx, canvas) => {
+    const updateDots = (ctx, canvas, deltaTime) => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         dots.forEach((dot) => {
@@ -186,6 +196,14 @@ const DelaunayBackground = () => {
 
             if (dot.x < -spawnOffset || dot.x > canvas.width + spawnOffset) dot.dx *= -1;
             if (dot.y < -spawnOffset || dot.y > canvas.height + spawnOffset) dot.dy *= -1;
+
+            dot.directionChangeTimer += deltaTime;
+
+            if (dot.directionChangeTimer >= dot.directionChangeTime) {
+                updateDotDirection(dot);
+                dot.directionChangeTimer = 0;
+                dot.directionChangeTime = randomBetween(minDirectionChangeInterval, maxDirectionChangeInterval);
+            }
         });
 
         const triangles = delaunayTriangulation(dots, canvas);
@@ -198,7 +216,7 @@ const DelaunayBackground = () => {
             ctx.fill();
         });
 
-        requestAnimationFrame(() => updateDots(ctx, canvas));
+        // requestAnimationFrame(() => updateDots(ctx, canvas));
     };
 
     const resizeCanvas = (canvas) => {
@@ -212,7 +230,19 @@ const DelaunayBackground = () => {
 
         resizeCanvas(canvas);
         createDots(canvas);
-        updateDots(ctx, canvas);
+
+        let lastTime = 0;
+
+        const animate = (time) => {
+            const deltaTime = time - lastTime;
+            lastTime = time;
+
+            updateDots(ctx, canvas, deltaTime);
+            requestAnimationFrame(animate);
+        }
+        
+        requestAnimationFrame(animate);
+        // updateDots(ctx, canvas);
 
         const handleResize = () => {
             resizeCanvas(canvas);
