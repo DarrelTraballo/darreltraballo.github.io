@@ -13,7 +13,7 @@ const icons = {
 export default function Tag({ name }) {
     return (
         <div 
-            key={name} 
+            key={`${name}`} 
             className="flex items-center bg-tertiary-font/20 hover:bg-tertiary-font/30 text-primary-font rounded-full px-3 py-1.5 text-sm transition-colors duration-200 ease-in-out border border-tertiary-bg/30"
         >
             {icons[name] && (

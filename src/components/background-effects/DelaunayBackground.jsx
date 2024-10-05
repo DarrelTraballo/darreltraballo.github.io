@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from 'react';
 
 const DelaunayBackground = () => {
     const canvasRef = useRef(null);
-    const maxDotSize = 7;
-    const minDotSize = 3;
+    const maxDotSize = 5;
+    const minDotSize = 1;
     const dotSpeed = 0.25;
     const dots = [];
     const dotCount = 15;
@@ -11,10 +11,13 @@ const DelaunayBackground = () => {
     const minDirectionChangeInterval = 2000;
     const maxDirectionChangeInterval = 5000;
 
-    const bgColor = '#0D745A'
-    const gradientColor = '#50AC47'
-
+    const bgColor = '#044321'
+    const gradientColor = '#7EFC28'
+    
     const randomBetween = (min, max) => Math.random() * (max - min) + min
+    
+    const lineOpacity = randomBetween(0, 0.25);
+    const dotOpacity = randomBetween(0, 0.25);
 
     // Hex to RGB conversion
     const hexToRgb = (hex) => {
@@ -52,6 +55,15 @@ const DelaunayBackground = () => {
         const color2 = hexToRgb(gradientColor);
         return lerpColor(color1, color2, t);
     };
+
+    const getDotGradientColor = (dot, canvasHeight) => {
+        const { y } = dot;
+        const clampedY = Math.max(0, Math.min(y, canvasHeight));
+        const t = clampedY / canvasHeight; // normalize y to range 0 to 1
+        const color1 = hexToRgb('#000000');
+        const color2 = hexToRgb('#FFFFFF');
+        return lerpColor(color1, color2, t);
+    }
 
     // Calculate circumcircle determinant
     // 2. Implement edge case handling in circumcircle function
@@ -182,10 +194,20 @@ const DelaunayBackground = () => {
             ctx.lineTo(triangle[2].x, triangle[2].y);
             ctx.closePath();
             ctx.fill()
-            ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
+            ctx.strokeStyle = `rgba(255, 255, 255, ${lineOpacity})`;
             ctx.stroke();
         });
     };
+
+    const drawDots = (ctx, canvas) => {
+        dots.forEach((dot) => {
+            ctx.beginPath();
+            ctx.arc(dot.x, dot.y, dot.size, 0, Math.PI * 2);
+            // ctx.fillStyle = getDotGradientColor(dot, canvas.height);
+            ctx.fillStyle = `rgba(255, 255, 255, ${dotOpacity})`;
+            ctx.fill();
+        });
+    }
 
     const updateDots = (ctx, canvas, deltaTime) => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -209,12 +231,7 @@ const DelaunayBackground = () => {
         const triangles = delaunayTriangulation(dots, canvas);
         drawTriangles(ctx, triangles, canvas);
 
-        dots.forEach((dot) => {
-            ctx.beginPath();
-            ctx.arc(dot.x, dot.y, dot.size, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(255, 255, 255, 1)';
-            ctx.fill();
-        });
+        drawDots(ctx, canvas);
 
         // requestAnimationFrame(() => updateDots(ctx, canvas));
     };
