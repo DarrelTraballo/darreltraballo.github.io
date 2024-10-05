@@ -8,8 +8,8 @@ const DelaunayBackground = () => {
     const dots = [];
     const dotCount = 15;
     const spawnOffset = 500
-    const minDirectionChangeInterval = 1000;
-    const maxDirectionChangeInterval = 4000;
+    const minDirectionChangeInterval = 2000;
+    const maxDirectionChangeInterval = 5000;
 
     const bgColor = '#0D745A'
     const gradientColor = '#50AC47'
