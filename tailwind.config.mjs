@@ -5,12 +5,13 @@ export default {
 		extend: {
 			colors: {
 				'primary-bg': '#044321',
-				'secondary-bg': '#1A1B41',
+				'secondary-bg': '#044341',
 				'tertiary-bg': '#7EFC28',
 
 				'primary-font': '#ffffff',
 				'secondary-font': '#9ca3af',
-				'tertiary-font': '#6b7280',
+				'tertiary-font': '#9ca3af',
+				// 'tertiary-font': '#6b7280',
 
 				'link-color': '#60a5fa',
 			},
