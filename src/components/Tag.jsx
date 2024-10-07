@@ -1,13 +1,22 @@
+import UnityIcon from "../assets/images/icons/devicon-plain--unity.png"
+import CSharpIcon from "../assets/images/icons/devicon-plain--csharp.png"
+import PythonIcon from "../assets/images/icons/devicon-plain--python.png"
+import NumpyIcon from "../assets/images/icons/devicon-plain--numpy.png"
+import PandasIcon from "../assets/images/icons/devicon-plain--pandas.png"
+import MatplotlibIcon from "../assets/images/icons/devicon-plain--matplotlib.png"
+import PygameIcon from "../assets/images/icons/pygame-logo.png"
+import GamepadVariantIcon from "../assets/images/icons/mdi--gamepad-variant.png"
+
 const icons = {
-    "Unity": "/images/icons/devicon-plain--unity.png",
-    "C#": "/images/icons/devicon-plain--csharp.png",
-    "Python": "/images/icons/devicon-plain--python.png",
-    "Numpy": "/images/icons/devicon-plain--numpy.png",
-    "Pandas": "/images/icons/devicon-plain--pandas.png",
-    "Matplotlib": "/images/icons/devicon-plain--matplotlib.png",
-    "Pygame": "/images/icons/pygame-logo.png",
-    "Game Development": "/images/icons/mdi--gamepad-variant.png",
-    "Game Developer": "/images/icons/mdi--gamepad-variant.png",
+    "Unity": UnityIcon.src,
+    "C#": CSharpIcon.src,
+    "Python": PythonIcon.src,
+    "Numpy": NumpyIcon.src,
+    "Pandas": PandasIcon.src,
+    "Matplotlib": MatplotlibIcon.src,
+    "Pygame": PygameIcon.src,
+    "Game Development": GamepadVariantIcon.src,
+    "Game Developer": GamepadVariantIcon.src,
 }
 // Tag.jsx
 export default function Tag({ name = "", src = "", text = "" }) {

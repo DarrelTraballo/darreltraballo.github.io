@@ -1,10 +1,19 @@
+import WaterImage from "./assets/images/projects/Water.gif"
+import PokemonImage from "./assets/images/projects/Pokemon.gif"
+import AByteSizedMuseumImage from "./assets/images/projects/AByteSizedMuseum.png"
+import WFCImage from "./assets/images/projects/WFC_Python.png"
+import PCDefenderImage from "./assets/images/projects/PCDefender.png"
+import ScatterImage from "./assets/images/projects/Scatter.png"
+import GeneticAlgorithmImage from "./assets/images/projects/GeneticAlgorithm.png"
+// import EnderDragonAIImage from "./assets/images/projects/Water.gif"
+
 export const data = {
     projects: [
         {
             id: "1",
             title: "Water Simulation",
             tag: "Game Development",
-            imageSrc: "/images/projects/Water.gif",
+            imageSrc: WaterImage.src,
             description: "An attempt to create a simple simulation of waves using Unity's Shader Language, implementing Sum of Sines and Lambertian Diffuse lighting.",
             tech: ["Unity", "C#"],
             details: [
@@ -15,7 +24,7 @@ export const data = {
             id: "2",
             title: "Pokemon Battle System Clone",
             tag: "Game Development",
-            imageSrc: "/images/projects/Pokemon.gif",
+            imageSrc: PokemonImage.src,
             description: "A simplified recreation of Pokemon's Generation 1 battle system.",
             tech: ["Unity", "C#"],
             details: [
@@ -28,7 +37,7 @@ export const data = {
             id: "3",
             title: "A Byte-Sized Museum",
             tag: "Game Development",
-            imageSrc: "/images/projects/AByteSizedMuseum.png",
+            imageSrc: AByteSizedMuseumImage.src,
             description: "A Game-Based Learning application that introduces computer programming concepts using Wave Function Collapse for procedural generation.",
             tech: ["Unity", "C#"],
             details: [
@@ -39,7 +48,7 @@ export const data = {
             id: "4",
             title: "Wave Function Collapse Algorithm",
             tag: "Game Development",
-            imageSrc: "/images/projects/WFC_Python.png",
+            imageSrc: WFCImage.src,
             description: "A Python-based implementation of the Tile-Based Wave Function Collapse Algorithm",
             tech: ["Python", "Pygame", "Numpy"],
             details: [
@@ -50,7 +59,7 @@ export const data = {
             id: "5",
             title: "PCDefender",
             tag: "Game Development",
-            imageSrc: "/images/projects/PCDefender.png",
+            imageSrc: PCDefenderImage.src,
             description: "A 2D Tower Defense game where you play as a computer's Antivirus Software defending against waves of computer malware.",
             tech: ["Unity", "C#"],
             details: [
@@ -61,7 +70,7 @@ export const data = {
             id: "6",
             title: "Scatter",
             tag: "Game Development",
-            imageSrc: "/images/projects/Scatter.png",
+            imageSrc: ScatterImage.src,
             description: "A 2D RTS game where survival depends on real-time resource scavenging.",
             tech: ["Unity", "C#"],
             details: [
@@ -72,7 +81,7 @@ export const data = {
             id: "7",
             title: "Genetic Algorithm for Solving a Multiple Variable Combinatorial Optimization Problem",
             tag: "Others",
-            imageSrc: "/images/projects/GeneticAlgorithm.png",
+            imageSrc: GeneticAlgorithmImage.src,
             description: "A Python-based program using a Genetic Algorithm to solve a multi-variable combinatorial optimization problem.",
             tech: ["Python", "Numpy", "Pandas", "Matplotlib"],
             details: [

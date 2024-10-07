@@ -2,14 +2,18 @@
 import Tag from "../components/Tag.jsx"
 import { Icon } from "astro-iconify"
 
+import ProfilePic from "../assets/images/face/profile_pic.png"
+import GradPic from "../assets/images/face/grad-pic.png"
+import LocationIcon from "../assets/images/icons/mdi--location.png"
+
+const isLocal = import.meta.env.MODE === "development"
+const imageSrc = isLocal ? ProfilePic.src : GradPic.src
+
 const socialLinks = [
     { name: "GitHub", icon: "mdi:github", url: "https://github.com/DarrelTraballo" },
     { name: "LinkedIn", icon: "mdi:linkedin", url: "https://www.linkedin.com/in/darrel-traballo" },
     { name: "Email", icon: "mdi:email", url: "mailto:darreltraballo1121@gmail.com" },
 ]
-
-const isLocal = import.meta.env.MODE === "development"
-const imageSrc = isLocal ? "/images/face/profile_pic.png" : "/images/face/grad-pic.JPG"
 ---
 
 <!-- Header.astro -->
@@ -24,7 +28,7 @@ const imageSrc = isLocal ? "/images/face/profile_pic.png" : "/images/face/grad-p
                 <Tag name="Unity" />
             </div>
             <div class="flex flex-wrap gap-2 pb-2">
-                <Tag src="/images/icons/mdi--location.png" text="Mandaluyong City, Metro Manila, Philippines" />
+                <Tag src={LocationIcon.src} text="Mandaluyong City, Metro Manila, Philippines" />
             </div>
             <p class="text-justify text-sm md:text-base mt-4">
                 I'm a <span id="age"></span> year old Game Developer who loves creating interactive experiences through code.
