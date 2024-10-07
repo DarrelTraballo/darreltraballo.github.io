@@ -3,6 +3,11 @@ import { delaunayTriangulation } from './DelaunayTriangulation';
 import { getTriangleGradientColor, randomBetween } from './utils';
 import { generatePoints } from './PoissonDiscSampling';
 
+import resolveConfig from 'tailwindcss/resolveConfig';
+import tailwindConfig from '../../../tailwind.config';
+
+const fullConfig = resolveConfig(tailwindConfig);
+
 const DelaunayBackground = () => {
     const canvasRef = useRef(null);
     const maxDotSize = 5;
@@ -13,8 +18,8 @@ const DelaunayBackground = () => {
     const minDirectionChangeInterval = 5000;
     const maxDirectionChangeInterval = 8000;
 
-    const bgColor = '#044321'
-    const gradientColor = '#7EFC28'
+    const bgColor = fullConfig.theme.colors['primary-bg']
+    const gradientColor = fullConfig.theme.colors['tertiary-bg']
         
     const lineOpacity = randomBetween(0, 0.25);
     const dotOpacity = randomBetween(0, 0.25);
