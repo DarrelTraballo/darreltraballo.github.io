@@ -8,6 +8,7 @@ import LocationIcon from "../assets/images/icons/mdi--location.png"
 
 const isLocal = import.meta.env.MODE === "development"
 const imageSrc = isLocal ? ProfilePic.src : GradPic.src
+// const imageSrc = GradPic.src
 
 const socialLinks = [
     { name: "GitHub", icon: "mdi:github", url: "https://github.com/DarrelTraballo" },
@@ -53,10 +54,12 @@ const socialLinks = [
                 }
             </div>
         </div>
-        <div class="justify-self-center lg:mt-8 md:mt-0 sm:mt-0 order-1 md:order-2">
-            <div class="rounded-full p-2">
-                <img src={imageSrc} alt={"Darrel Traballo"} class="w-auto h-auto rounded-full object-cover" />
-            </div>
+        <div class="justify-self-center order-1 md:order-2">
+            <img
+                src={imageSrc}
+                alt={"Darrel Traballo's profile picture"}
+                class="w-auto h-auto lg:min-w-96 lg:min-h-96 rounded-full object-cover"
+            />
         </div>
     </div>
 </section>
