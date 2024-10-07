@@ -1,7 +1,32 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro"
+import PageIcon from "../assets/images/icons/mdi--gamepad-variant.svg"
+import TestBackground from "../components/background-effects/TestBackground.jsx"
+import DelaunayBackground from "../components/background-effects/DelaunayBackground.jsx"
 
-const pageTitle = "Playground"
+const title = "Playground"
+const isLocal = import.meta.env.MODE === "development"
+const pageTitle = isLocal ? "[DEV] " + title : title
 ---
 
-<MainLayout title={pageTitle} />
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href={PageIcon.src} />
+        <meta name="generator" content={Astro.generator} />
+        <title>{pageTitle}</title>
+    </head>
+    <body class="bg-gradient-to-b from-primary-bg to-tertiary-bg bg-fixed text-primary-font min-h-screen flex flex-col">
+        <div class="fixed inset-0 -z-10 h-full">
+            <DelaunayBackground client:load />
+        </div>
+        <style>
+            body {
+                font-family: "Roboto", sans-serif;
+                min-height: 100vh;
+            }
+        </style>
+    </body>
+</html>
