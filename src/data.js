@@ -17,7 +17,7 @@ export const data = {
             description: "An attempt to create a simple simulation of waves using Unity's Shader Language, implementing Sum of Sines and Lambertian Diffuse lighting.",
             tech: ["Unity", "C#"],
             details: [
-                "Introductory shader programming project."
+                "Learned how to work with and configure Vertex and Fragment Shaders using Unity's Shader Language.",
             ],
         },
         {
@@ -63,7 +63,7 @@ export const data = {
             description: "A 2D Tower Defense game where you play as a computer's Antivirus Software defending against waves of computer malware.",
             tech: ["Unity", "C#"],
             details: [
-                "Made in 5 days for a University Hackathon."
+                "Made in 5 days for a Hackathon held by our University."
             ],
         },
         {
@@ -85,7 +85,8 @@ export const data = {
             description: "A Python-based program using a Genetic Algorithm to solve a multi-variable combinatorial optimization problem.",
             tech: ["Python", "Numpy", "Pandas", "Matplotlib"],
             details: [
-                "Made alongside a research manuscript of the same title as a final project for my Discrete Structures 2 course."
+                "Made alongside a research manuscript of the same title as a final project for my Discrete Structures 2 course.",
+                "Manuscript was recognized as runner-up for Best Manuscript in class."
             ],
         },
         {

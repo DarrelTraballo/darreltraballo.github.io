@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro"
 import Header from "../layouts/Header.astro"
 import SkillsSection from "../layouts/SkillsSection.astro"
-import ProjectsSection from "../layouts/ProjectsSection.astro"
+import ProjectsSection from "../layouts/ProjectsSection.jsx"
 import Education from "../layouts/EducationSection.astro"
 import ContactMeSection from "../layouts/ContactMeSection.astro"
 
@@ -19,7 +19,7 @@ const pageTitle = "Darrel Traballo: Game Developer"
         <SkillsSection />
 
         <!-- Projects -->
-        <ProjectsSection />
+        <ProjectsSection client:load />
 
         <!-- Education -->
         <Education />

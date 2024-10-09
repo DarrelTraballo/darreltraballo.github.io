@@ -11,8 +11,8 @@ export default function ProjectCard({title, tag, description, imageSrc, techs, d
                 <div className="p-4 flex flex-col flex-grow">
                     <h3 className="text-lg sm:text-xl font-bold mb-2">{title}</h3>
                     <div className="flex flex-wrap justify-start mb-2 gap-2">
-                        {techs.map(tech => (
-                            <Tag name={tech} />
+                        {techs.map((tech, index) => (
+                            <Tag name={tech} index={index} />
                         ))}
                     </div>
                     <p className="text-secondary-font mb-4 text-sm sm:text-base">{description}</p>

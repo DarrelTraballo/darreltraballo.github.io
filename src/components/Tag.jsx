@@ -19,10 +19,10 @@ const icons = {
     "Game Developer": GamepadVariantIcon.src,
 }
 // Tag.jsx
-export default function Tag({ name = "", src = "", text = "" }) {
+export default function Tag({ name = "", src = "", text = "", index }) {
     return (
         <div 
-            key={`${name}`} 
+            key={`${index}`} 
             className="flex items-center bg-tertiary-font/20 hover:bg-tertiary-font/30 text-primary-font rounded-full px-2 py-1 sm:px-3 sm:py-1.5 text-xs sm:text-sm transition-colors duration-200 ease-in-out border border-tertiary-bg/30"
         >
             {(src !== "" ? src : icons[name]) && (
