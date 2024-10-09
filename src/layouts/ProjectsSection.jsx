@@ -18,41 +18,28 @@ export default function ProjectsSection() {
         setSelectedTab(category)
     }
 
-    const filteredProjects = projects.filter((project) => {
-        if (selectedTab === "Game Development") {
-            return project.tag === "Game Development"
-        } 
-        else if (selectedTab === "Web Development") {
-            return project.tag === "Web Development"
-        } 
-        else if (selectedTab === "Others") {
-            return project.tag === "Others"
-        }
-        return true
-    })
+    const filteredProjects = projects.filter((project) => 
+        selectedTab === "All" || project.tag === selectedTab
+    )
+
+    const categories = ["All", "Game Development", "Web Development", "Others"]
 
     return (
         <section id="projects" className="mb-12">
             <h2 className="text-2xl md:text-3xl text-center font-bold mb-8">Projects</h2>
-            <div className='flex justify-center gap-6 mb-8'>
-                <button
-                    className={`text-xl md:text-2xl mx-2 px-4 py-2 font-bold ${selectedTab === "Game Development" ? "border-b-2 border-secondary-bg" : ""}`}
-                    onClick={() => handleTabClick("Game Development")}
-                >
-                    Game Development
-                </button>
-                <button
-                    className={`text-xl md:text-2xl mx-2 px-4 py-2 font-bold ${selectedTab === "Web Development" ? "border-b-2 border-secondary-bg" : ""}`}
-                    onClick={() => handleTabClick("Web Development")}
-                >
-                    Web Development
-                </button>
-                <button
-                    className={`text-xl md:text-2xl mx-2 px-4 py-2 font-bold ${selectedTab === "Others" ? "border-b-2 border-secondary-bg" : ""}`}
-                    onClick={() => handleTabClick("Others")}
-                >
-                    Other Projects
-                </button>
+            <div className='flex flex-wrap justify-center gap-6 mb-8'>
+                {categories.map((category) => (
+                    <button
+                        key={category}
+                        className={`text-lg md:text-xl px-3 py-2 font-bold transition-all duration-200 
+                        ${selectedTab === category 
+                            ? "border-b-2 border-secondary-bg" 
+                            : "hover:border-b-2 hover:border-secondary-bg"}`}
+                        onClick={() => handleTabClick(category)}
+                    >
+                        {category}
+                    </button>
+                ))}
             </div>
 
             <div className='relative overflow-hidden'>
@@ -83,8 +70,7 @@ export default function ProjectsSection() {
                 </motion.div>
                 </AnimatePresence>
             </div>
-
-            
         </section>
+        
     )
 }
