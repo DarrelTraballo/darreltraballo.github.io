@@ -5,7 +5,7 @@ import WFCImage from "./assets/images/projects/WFC_Python.png"
 import PCDefenderImage from "./assets/images/projects/PCDefender.png"
 import ScatterImage from "./assets/images/projects/Scatter.png"
 import GeneticAlgorithmImage from "./assets/images/projects/GeneticAlgorithm.png"
-// import EnderDragonAIImage from "./assets/images/projects/Water.gif"
+import EnderDragonAIImage from "./assets/images/projects/EnderDragonAI.gif"
 
 export const data = {
     projects: [
@@ -93,7 +93,7 @@ export const data = {
             id: "8",
             title: "Ender Dragon AI Clone",
             tag: "Game Development",
-            imageSrc: "",
+            imageSrc: EnderDragonAIImage.src,
             description: "An attempt to recreate Minecraft's Ender Dragon AI in Unity.",
             tech: ["Unity", "C#"],
             details: [
