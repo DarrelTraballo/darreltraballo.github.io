@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import ProjectCard from '../components/ProjectCard'
-import { data } from '../data.js'
+import { data } from '../utils/data.js'
 
 const projects = data.projects
 

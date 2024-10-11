@@ -1,6 +1,7 @@
 import Tag from "./Tag.jsx"
 import PlaceholderImage from "../assets/images/projects/placeholder.png"
-// ProjectCard.jsx
+import icons from "../utils/icons.js"
+
 export default function ProjectCard({title, tag, description, imageSrc, techs, details}) {
     const placeholderImage = PlaceholderImage.src
 
@@ -12,13 +13,18 @@ export default function ProjectCard({title, tag, description, imageSrc, techs, d
                     <h3 className="text-lg sm:text-xl font-bold mb-2">{title}</h3>
                     <div className="flex flex-wrap justify-start mb-2 gap-2">
                         {techs.map((tech, index) => (
-                            <Tag name={tech} index={index} />
+                            <Tag 
+                                key={`${title}-${tech}-${index}`} 
+                                iconSrc={icons[tech]} 
+                                displayText={(tech === "CSharp") ? "C#" : tech} 
+                                index={index} 
+                            />
                         ))}
                     </div>
                     <p className="text-secondary-font mb-4 text-sm sm:text-base">{description}</p>
                     <ul className="text-sm text-tertiary-font mt-auto list-disc list-inside">
                         {details.map((detail, index) => (
-                            <li key={index} className="py-1">{detail}</li>
+                            <li key={`${title}-detail-${index}`} className="py-1">{detail}</li>
                         ))}
                     </ul>
                 </div>

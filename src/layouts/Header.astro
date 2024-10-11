@@ -1,10 +1,10 @@
 ---
 import Tag from "../components/Tag.jsx"
 import { Icon } from "astro-iconify"
+import icons from "../utils/icons.js"
 
 import ProfilePic from "../assets/images/face/profile_pic.png"
 import GradPic from "../assets/images/face/grad-pic.png"
-import LocationIcon from "../assets/images/icons/mdi--location.png"
 
 const isLocal = import.meta.env.MODE === "development"
 const imageSrc = isLocal ? ProfilePic.src : GradPic.src
@@ -17,7 +17,6 @@ const socialLinks = [
 ]
 ---
 
-<!-- Header.astro -->
 <section id="home" class="mb-12 mx-2">
     <div
         class="grid grid-cols-1 md:grid-cols-2 gap-10 bg-gradient-to-b from-secondary-bg rounded-lg px-6 md:px-14 py-8 justify-center">
@@ -25,11 +24,21 @@ const socialLinks = [
             <h1 class="text-4xl md:text-5xl pt-4 font-bold">Yo, I'm <br /> Darrel Traballo</h1>
 
             <div class="py-2 flex flex-wrap gap-2">
-                <Tag name="Game Developer" index="Game Developer" />
-                <Tag name="Unity" index="Unity" />
+                <Tag
+                    iconSrc={icons.GameDeveloper}
+                    displayText="Game Developer"
+                    index="Game Developer"
+                    expandable={false}
+                />
+                <Tag iconSrc={icons.Unity} displayText="Unity" index="Unity" expandable={false} />
             </div>
             <div class="flex flex-wrap gap-2 pb-2">
-                <Tag src={LocationIcon.src} text="Mandaluyong City, Metro Manila, Philippines" index="Location" />
+                <Tag
+                    iconSrc={icons.Location}
+                    displayText="Mandaluyong City, Metro Manila, Philippines"
+                    index="Location"
+                    expandable={false}
+                />
             </div>
             <p class="text-justify text-sm md:text-base mt-4">
                 I'm a <span id="age"></span> year old Game Developer who loves creating interactive experiences through code.

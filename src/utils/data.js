@@ -1,11 +1,11 @@
-import WaterImage from "./assets/images/projects/Water.gif"
-import PokemonImage from "./assets/images/projects/Pokemon.gif"
-import AByteSizedMuseumImage from "./assets/images/projects/AByteSizedMuseum.png"
-import WFCImage from "./assets/images/projects/WFC_Python.png"
-import PCDefenderImage from "./assets/images/projects/PCDefender.png"
-import ScatterImage from "./assets/images/projects/Scatter.png"
-import GeneticAlgorithmImage from "./assets/images/projects/GeneticAlgorithm.png"
-import EnderDragonAIImage from "./assets/images/projects/EnderDragonAI.gif"
+import WaterImage from "../assets/images/projects/Water.gif"
+import PokemonImage from "../assets/images/projects/Pokemon.gif"
+import AByteSizedMuseumImage from "../assets/images/projects/AByteSizedMuseum.png"
+import WFCImage from "../assets/images/projects/WFC_Python.png"
+import PCDefenderImage from "../assets/images/projects/PCDefender.png"
+import ScatterImage from "../assets/images/projects/Scatter.png"
+import GeneticAlgorithmImage from "../assets/images/projects/GeneticAlgorithm.png"
+import EnderDragonAIImage from "../assets/images/projects/EnderDragonAI.gif"
 
 export const data = {
     projects: [
@@ -15,7 +15,7 @@ export const data = {
             tag: "Game Development",
             imageSrc: WaterImage.src,
             description: "An attempt to create a simple simulation of waves using Unity's Shader Language, implementing Sum of Sines and Lambertian Diffuse lighting.",
-            tech: ["Unity", "C#"],
+            tech: ["Unity", "CSharp"],
             details: [
                 "Learned how to work with and configure Vertex and Fragment Shaders using Unity's Shader Language.",
             ],
@@ -26,7 +26,7 @@ export const data = {
             tag: "Game Development",
             imageSrc: PokemonImage.src,
             description: "A simplified recreation of Pokemon's Generation 1 battle system.",
-            tech: ["Unity", "C#"],
+            tech: ["Unity", "CSharp"],
             details: [
                 "Used PokeAPI to collect and display Pokemon data.",  
                 "Learned how to use Unity's custom inspector.", 
@@ -39,7 +39,7 @@ export const data = {
             tag: "Game Development",
             imageSrc: AByteSizedMuseumImage.src,
             description: "A Game-Based Learning application that introduces computer programming concepts using Wave Function Collapse for procedural generation.",
-            tech: ["Unity", "C#"],
+            tech: ["Unity", "CSharp"],
             details: [
                 "3D game project developed for my Thesis."
             ],
@@ -61,7 +61,7 @@ export const data = {
             tag: "Game Development",
             imageSrc: PCDefenderImage.src,
             description: "A 2D Tower Defense game where you play as a computer's Antivirus Software defending against waves of computer malware.",
-            tech: ["Unity", "C#"],
+            tech: ["Unity", "CSharp"],
             details: [
                 "Made in 5 days for a Hackathon held by our University."
             ],
@@ -72,7 +72,7 @@ export const data = {
             tag: "Game Development",
             imageSrc: ScatterImage.src,
             description: "A 2D RTS game where survival depends on real-time resource scavenging.",
-            tech: ["Unity", "C#"],
+            tech: ["Unity", "CSharp"],
             details: [
                 "Made in 2 weeks with a friend for the Pirate Software Game Jam 14 (Jan 12, 2024 – Jan 27, 2024)."
             ],
@@ -95,7 +95,7 @@ export const data = {
             tag: "Game Development",
             imageSrc: EnderDragonAIImage.src,
             description: "An attempt to recreate Minecraft's Ender Dragon AI in Unity.",
-            tech: ["Unity", "C#"],
+            tech: ["Unity", "CSharp"],
             details: [
                 "Ender Dragon's behavior patterns were created to be as close to the original game as possible",
                 "Learned how to implement enemy AI behavior using State Machines to manage the Ender Dragon's behavior patterns."
