@@ -6,6 +6,7 @@ import PCDefenderImage from "../assets/images/projects/PCDefender.png"
 import ScatterImage from "../assets/images/projects/Scatter.png"
 import GeneticAlgorithmImage from "../assets/images/projects/GeneticAlgorithm.png"
 import EnderDragonAIImage from "../assets/images/projects/EnderDragonAI.gif"
+import PortfolioImage from "../assets/images/projects/PortfolioImage.png"
 
 export const data = {
     projects: [
@@ -99,6 +100,17 @@ export const data = {
             details: [
                 "Ender Dragon's behavior patterns were created to be as close to the original game as possible",
                 "Learned how to implement enemy AI behavior using State Machines to manage the Ender Dragon's behavior patterns."
+            ]
+        },
+        {
+            id: "9",
+            title: "Portfolio Website",
+            tag: "Web Development",
+            imageSrc: PortfolioImage.src,
+            description: "A personal website built using Astro, React, and Tailwind CSS, showcasing my game development and algorithm-focused projects.",
+            tech: ["Javascript", "React", "TailwindCSS", "Astro"],
+            details: [
+                "Custom background effect was created by implementing Delauney Triangulation and Poisson Disc Sampling.",
             ]
         }
     ],

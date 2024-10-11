@@ -7,6 +7,10 @@ import MatplotlibIcon from "../assets/images/icons/devicon-plain--matplotlib.png
 import PygameIcon from "../assets/images/icons/pygame-logo.png"
 import GamepadVariantIcon from "../assets/images/icons/mdi--gamepad-variant.png"
 import LocationIcon from "../assets/images/icons/mdi--location.png"
+import JavascriptIcon from "../assets/images/icons/mdi--language-javascript.png"
+import ReactIcon from "../assets/images/icons/mdi--react.png"
+import AstroIcon from "../assets/images/icons/devicon-plain--astro.png"
+import TailwindCSSIcon from "../assets/images/icons/mdi--tailwind.png"
 
 const icons = {
     Unity: UnityIcon.src,
@@ -19,6 +23,10 @@ const icons = {
     GameDevelopment: GamepadVariantIcon.src,
     GameDeveloper: GamepadVariantIcon.src,
     Location: LocationIcon.src,
+    Javascript: JavascriptIcon.src,
+    React: ReactIcon.src,
+    Astro: AstroIcon.src,
+    TailwindCSS: TailwindCSSIcon.src
 }
 
 export default icons
