@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
-import { generatePoints, drawPoints } from './PoissonDiscSampling'
-import { randomBetween } from './utils'
+import { generatePoints, drawPoints } from './utils/PoissonDiscSampling'
+import { randomBetween } from './utils/utils'
 
 const TestBackground = () => {
     const canvasRef = useRef(null)

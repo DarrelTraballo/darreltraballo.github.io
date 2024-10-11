@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
-import { delaunayTriangulation } from './DelaunayTriangulation';
-import { getTriangleGradientColor, randomBetween } from './utils';
-import { generatePoints } from './PoissonDiscSampling';
+import { delaunayTriangulation } from './utils/DelaunayTriangulation';
+import { getTriangleGradientColor, randomBetween } from './utils/utils';
+import { generatePoints } from './utils/PoissonDiscSampling';
 
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from '../../../tailwind.config';
