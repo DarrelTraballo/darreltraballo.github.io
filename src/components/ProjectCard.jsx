@@ -7,7 +7,7 @@ export default function ProjectCard({title, tag, description, imageSrc, techs, d
 
     return (
         <>
-            <div className="bg-primary-bg bg-opacity-75 shadow-md rounded-lg overflow-hidden flex flex-col">
+            <div className="bg-primary-bg bg-opacity-75 shadow-md rounded-lg overflow-hidden flex flex-col hover:bg-secondary-bg transition-all duration-200">
                 <img src={imageSrc || placeholderImage} alt={title} className="w-full h-48 sm:h-64 md:h-48 lg:h-64 object-cover" />
                 <div className="p-4 flex flex-col flex-grow">
                     <h3 className="text-lg sm:text-xl font-bold mb-2">{title}</h3>
