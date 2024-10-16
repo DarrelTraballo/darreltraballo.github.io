@@ -1,5 +1,6 @@
 ---
 import Tag from "../components/Tag.jsx"
+import Button from "../components/Button.jsx"
 import { Icon } from "astro-iconify"
 import icons from "../utils/icons.js"
 
@@ -8,6 +9,8 @@ import GradPic from "../assets/images/face/grad-pic.png"
 
 const isLocal = import.meta.env.MODE === "development"
 const imageSrc = isLocal ? ProfilePic.src : GradPic.src
+
+const resumePath = "/Resume-Traballo_Railee_Darrel.pdf"
 // const imageSrc = GradPic.src
 
 const socialLinks = [
@@ -19,7 +22,7 @@ const socialLinks = [
 
 <section id="home" class="mb-12 mx-2">
     <div
-        class="grid grid-cols-1 md:grid-cols-2 gap-10 bg-gradient-to-b from-secondary-bg rounded-lg px-6 md:px-14 py-8 justify-center">
+        class="grid grid-cols-1 md:grid-cols-2 gap-10 bg-[rgba(4,67,65,0.65)] rounded-lg px-6 md:px-14 py-8 justify-center">
         <div class="order-2 md:order-1">
             <h1 class="text-4xl md:text-5xl pt-4 font-bold">Yo, I'm <br /> Darrel Traballo</h1>
 
@@ -32,7 +35,7 @@ const socialLinks = [
                 />
                 <Tag iconSrc={icons.Unity} displayText="Unity" index="Unity" expandable={false} />
             </div>
-            <div class="flex flex-wrap gap-2 pb-2">
+            <div class="flex flex-wrap gap-2">
                 <Tag
                     iconSrc={icons.Location}
                     displayText="Mandaluyong City, Metro Manila, Philippines"
@@ -40,12 +43,13 @@ const socialLinks = [
                     expandable={false}
                 />
             </div>
-            <p class="text-justify text-sm md:text-base mt-4">
+            <p class="text-justify text-sm md:text-base mt-2">
                 I'm a <span id="age"></span> year old Game Developer who loves creating interactive experiences through code.
                 I specialize in solving gameplay and technical challenges, especially by recreating game systems to sharpen
                 my skills. I’m excited to apply my experience to projects that break new ground in gaming.
             </p>
             <div class="flex flex-wrap gap-2 mt-2">
+                <Button iconSrc={icons.FileDownload} displayText="Resume" href={resumePath} />
                 {
                     socialLinks.map(({ name, icon, url }) => (
                         <a
@@ -72,7 +76,6 @@ const socialLinks = [
         </div>
     </div>
 </section>
-<!-- <hr class="text-black" /> -->
 
 <script>
     const dob = new Date("11/21/2002")

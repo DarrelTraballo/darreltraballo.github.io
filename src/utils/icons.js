@@ -11,6 +11,8 @@ import JavascriptIcon from "../assets/images/icons/mdi--language-javascript.png"
 import ReactIcon from "../assets/images/icons/mdi--react.png"
 import AstroIcon from "../assets/images/icons/devicon-plain--astro.png"
 import TailwindCSSIcon from "../assets/images/icons/mdi--tailwind.png"
+import DownloadIcon from "../assets/images/icons/mdi--download.png"
+import FileDownloadIcon from "../assets/images/icons/mdi--file-download-outline.png"
 
 const icons = {
     Unity: UnityIcon.src,
@@ -26,7 +28,9 @@ const icons = {
     Javascript: JavascriptIcon.src,
     React: ReactIcon.src,
     Astro: AstroIcon.src,
-    TailwindCSS: TailwindCSSIcon.src
+    TailwindCSS: TailwindCSSIcon.src,
+    Download: DownloadIcon.src,
+    FileDownload: FileDownloadIcon.src,
 }
 
 export default icons
