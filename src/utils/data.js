@@ -213,17 +213,11 @@ export const data = {
                     certifications: [],
                     additionalDetails: "",
                 },
-                {
-                    name: "Test item",
-                    proficiency: "Advanced",
-                    yearsOfExperience: 5,
-                    certifications: ["Test Certification 1", "Test Certification 2", "Test Certification 3"],
-                    additionalDetails:
-                        "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
-                },
             ],
         },
     },
+    // TODO: Add professional experience
+    // include internship, just tag it as Others
     professional_experience: [],
     education: [
         {
