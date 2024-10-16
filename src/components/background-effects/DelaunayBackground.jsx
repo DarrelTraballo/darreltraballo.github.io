@@ -18,8 +18,8 @@ const DelaunayBackground = () => {
     const minDirectionChangeInterval = 5000;
     const maxDirectionChangeInterval = 8000;
 
-    const bgColor = fullConfig.theme.colors['primary-bg']
-    const gradientColor = fullConfig.theme.colors['tertiary-bg']
+    const bgColor = fullConfig.theme.colors['gradient-start']
+    const gradientColor = fullConfig.theme.colors['gradient-end']
         
     const lineOpacity = randomBetween(0, 0.25);
     const dotOpacity = randomBetween(0, 0.25);

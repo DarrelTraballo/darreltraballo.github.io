@@ -15,7 +15,8 @@ export const data = {
             title: "Water Simulation",
             tag: "Game Development",
             imageSrc: WaterImage.src,
-            description: "An attempt to create a simple simulation of waves using Unity's Shader Language, implementing Sum of Sines and Lambertian Diffuse lighting.",
+            description:
+                "An attempt to create a simple simulation of waves using Unity's Shader Language, implementing Sum of Sines and Lambertian Diffuse lighting.",
             tech: ["Unity", "CSharp"],
             details: [
                 "Learned how to work with and configure Vertex and Fragment Shaders using Unity's Shader Language.",
@@ -29,9 +30,9 @@ export const data = {
             description: "A simplified recreation of Pokemon's Generation 1 battle system.",
             tech: ["Unity", "CSharp"],
             details: [
-                "Used PokeAPI to collect and display Pokemon data.",  
-                "Learned how to use Unity's custom inspector.", 
-                "Learned how to create/edit Scriptable Objects programmatically."
+                "Used PokeAPI to collect and display Pokemon data.",
+                "Learned how to use Unity's custom inspector.",
+                "Learned how to create/edit Scriptable Objects programmatically.",
             ],
         },
         {
@@ -39,11 +40,10 @@ export const data = {
             title: "A Byte-Sized Museum",
             tag: "Game Development",
             imageSrc: AByteSizedMuseumImage.src,
-            description: "A Game-Based Learning application that introduces computer programming concepts using Wave Function Collapse for procedural generation.",
+            description:
+                "A Game-Based Learning application that introduces computer programming concepts using Wave Function Collapse for procedural generation.",
             tech: ["Unity", "CSharp"],
-            details: [
-                "3D game project developed for my Thesis."
-            ],
+            details: ["3D game project developed for my Thesis."],
         },
         {
             id: "4",
@@ -52,20 +52,17 @@ export const data = {
             imageSrc: WFCImage.src,
             description: "A Python-based implementation of the Tile-Based Wave Function Collapse Algorithm",
             tech: ["Python", "Pygame", "Numpy"],
-            details: [
-                "Served as a prototype for testing for my final Thesis output."
-            ],
+            details: ["Served as a prototype for testing for my final Thesis output."],
         },
         {
             id: "5",
             title: "PCDefender",
             tag: "Game Development",
             imageSrc: PCDefenderImage.src,
-            description: "A 2D Tower Defense game where you play as a computer's Antivirus Software defending against waves of computer malware.",
+            description:
+                "A 2D Tower Defense game where you play as a computer's Antivirus Software defending against waves of computer malware.",
             tech: ["Unity", "CSharp"],
-            details: [
-                "Made in 5 days for a Hackathon held by our University."
-            ],
+            details: ["Made in 5 days for a Hackathon held by our University."],
         },
         {
             id: "6",
@@ -75,7 +72,7 @@ export const data = {
             description: "A 2D RTS game where survival depends on real-time resource scavenging.",
             tech: ["Unity", "CSharp"],
             details: [
-                "Made in 2 weeks with a friend for the Pirate Software Game Jam 14 (Jan 12, 2024 – Jan 27, 2024)."
+                "Made in 2 weeks with a friend for the Pirate Software Game Jam 14 (Jan 12, 2024 – Jan 27, 2024).",
             ],
         },
         {
@@ -83,11 +80,12 @@ export const data = {
             title: "Genetic Algorithm for Solving a Multiple Variable Combinatorial Optimization Problem",
             tag: "Others",
             imageSrc: GeneticAlgorithmImage.src,
-            description: "A Python-based program using a Genetic Algorithm to solve a multi-variable combinatorial optimization problem.",
+            description:
+                "A Python-based program using a Genetic Algorithm to solve a multi-variable combinatorial optimization problem.",
             tech: ["Python", "Numpy", "Pandas", "Matplotlib"],
             details: [
                 "Made alongside a research manuscript of the same title as a final project for my Discrete Structures 2 course.",
-                "Manuscript was recognized as runner-up for Best Manuscript in class."
+                "Manuscript was recognized as runner-up for Best Manuscript in class.",
             ],
         },
         {
@@ -99,50 +97,134 @@ export const data = {
             tech: ["Unity", "CSharp"],
             details: [
                 "Ender Dragon's behavior patterns were created to be as close to the original game as possible",
-                "Learned how to implement enemy AI behavior using State Machines to manage the Ender Dragon's behavior patterns."
-            ]
+                "Learned how to implement enemy AI behavior using State Machines to manage the Ender Dragon's behavior patterns.",
+            ],
         },
         {
             id: "9",
             title: "Portfolio Website",
             tag: "Web Development",
             imageSrc: PortfolioImage.src,
-            description: "A personal website built using Astro, React, and Tailwind CSS, showcasing my game development and algorithm-focused projects.",
+            description:
+                "A personal website built using Astro, React, and Tailwind CSS, showcasing my game development and algorithm-focused projects.",
             tech: ["Javascript", "React", "TailwindCSS", "Astro"],
             details: [
                 "Custom background effect was created by implementing Delauney Triangulation and Poisson Disc Sampling.",
-            ]
-        }
-    ],
-    skills: [
-        {
-            category: "Preferred Languages",
-            items: ["C#", "Java"],
-        },
-        {
-            category: "Other Known Languages",
-            items: ["Python", "Javasript", "PHP"],
+            ],
         },
     ],
-    technologies: [
-        {
-            category: "Game Development",
-            items: ["Unity", "Shader Programming", "Pygame"],
+    skills: {
+        languages: [
+            {
+                name: "C#",
+                proficiency: "Intermediate",
+                yearsOfExperience: 3,
+                certifications: [],
+                additionalDetails: "",
+            },
+            {
+                name: "Java",
+                proficiency: "Intermediate",
+                yearsOfExperience: 2,
+                certifications: [],
+                additionalDetails: "",
+            },
+            {
+                name: "Python",
+                proficiency: "Intermediate",
+                yearsOfExperience: 1,
+                certifications: [],
+                additionalDetails: "",
+            },
+            {
+                name: "Javascript",
+                proficiency: "Beginner",
+                yearsOfExperience: 0,
+                certifications: [],
+                additionalDetails: "",
+            },
+        ],
+        technologies: {
+            game_development: [
+                {
+                    name: "Unity",
+                    proficiency: "Intermediate",
+                    yearsOfExperience: 2,
+                    certifications: [],
+                    additionalDetails: "",
+                },
+                {
+                    name: "Unity Shader Programming (HLSL)",
+                    proficiency: "Beginner",
+                    yearsOfExperience: 0,
+                    certifications: [],
+                    additionalDetails: "",
+                },
+                {
+                    name: "Pygame",
+                    proficiency: "Beginner",
+                    yearsOfExperience: 0,
+                    certifications: [],
+                    additionalDetails: "",
+                },
+            ],
+            web_development: [
+                {
+                    name: "React",
+                    proficiency: "Beginner",
+                    yearsOfExperience: 0,
+                    certifications: [],
+                    additionalDetails: "",
+                },
+                {
+                    name: "Astro",
+                    proficiency: "Beginner",
+                    yearsOfExperience: 0,
+                    certifications: [],
+                    additionalDetails: "",
+                },
+                {
+                    name: "TailwindCSS",
+                    proficiency: "Beginner",
+                    yearsOfExperience: 0,
+                    certifications: [],
+                    additionalDetails: "",
+                },
+            ],
+            others: [
+                {
+                    name: "Numpy",
+                    proficiency: "Beginner",
+                    yearsOfExperience: 0,
+                    certifications: [],
+                    additionalDetails: "",
+                },
+                {
+                    name: "Pandas",
+                    proficiency: "Beginner",
+                    yearsOfExperience: 0,
+                    certifications: [],
+                    additionalDetails: "",
+                },
+                {
+                    name: "Matplotlib",
+                    proficiency: "Beginner",
+                    yearsOfExperience: 0,
+                    certifications: [],
+                    additionalDetails: "",
+                },
+                {
+                    name: "Test item",
+                    proficiency: "Advanced",
+                    yearsOfExperience: 5,
+                    certifications: ["Test Certification 1", "Test Certification 2", "Test Certification 3"],
+                    additionalDetails:
+                        "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+                },
+            ],
         },
-        {
-            category: "Agorithm Development",
-            items: ["Genetic Algorithms", "Procedural Generation"],
-        },
-        {
-            category: "Web Development",
-            items: ["Astro", "React", "Tailwind CSS"],
-        },
-        {
-            category: "Data Analysis & Visualization",
-            items: ["Numpy", "Pandas", "Matplotlib"],
-        },
-    ],
-    professional_experience:[],
+    },
+    professional_experience: [],
     education: [
         {
             title: "Bachelor of Computer Science",
