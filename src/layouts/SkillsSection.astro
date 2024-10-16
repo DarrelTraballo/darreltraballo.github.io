@@ -1,37 +1,41 @@
 ---
+import SkillAccordion from "../components/SkillAccordion.jsx"
 import { data } from "../utils/data.js"
+import icons from "../utils/icons.js"
+
 const skills = data.skills
-const technologies = data.technologies
 ---
 
 <section class="py-10 mb-12">
     <h2 class="text-2xl md:text-3xl text-center font-semibold mb-8">Skills and Technologies</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 mx-auto px-6 md:px-20 lg:px-28 gap-10">
         <div class="grid grid-cols-1 gap-6">
+            <h2>Languages</h2>
             {
-                skills.map((skill) => (
-                    <div class="bg-secondary-bg bg-opacity-65 rounded-lg p-4 md:p-6">
-                        <h3 class="text-lg md:text-xl font-bold mb-4">{skill.category}</h3>
-                        <ul class="list-disc list-inside">
-                            {skill.items.map((item) => (
-                                <li class="mb-2">{item}</li>
-                            ))}
-                        </ul>
-                    </div>
+                skills.languages.map((language) => (
+                    <SkillAccordion
+                        iconSrc={icons[language.name]}
+                        skillName={language.name},
+                        proficiency={language.proficiency},
+                        yearsOfExperience={language.yearsOfExperience},
+                        certifications={language.certifications},
+                        additionalDetails={language.additionalDetails}, 
+                    />
                 ))
             }
         </div>
         <div class="grid grid-cols-1 gap-6">
+            
             {
-                technologies.map((technology) => (
-                    <div class="bg-secondary-bg bg-opacity-75 rounded-lg p-4 md:p-6">
-                        <h3 class="text-lg md:text-xl font-bold mb-4">{technology.category}</h3>
-                        <ul class="list-disc list-inside">
-                            {technology.items.map((item) => (
-                                <li class="mb-2">{item}</li>
-                            ))}
-                        </ul>
-                    </div>
+                skills.technologies.map((technology) => (
+                    <SkillAccordion
+                            iconSrc={icons[technology.name]}
+                            skillName={technology.name},
+                            proficiency={technology.proficiency},
+                            yearsOfExperience={technology.yearsOfExperience},
+                            certifications={technology.certifications},
+                            additionalDetails={technology.additionalDetails}, 
+                        />
                 ))
             }
         </div>

@@ -25,7 +25,8 @@ const pageTitle = isLocal ? "[DEV] " + title : title
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
     </head>
-    <body class="bg-gradient-to-b from-primary-bg to-tertiary-bg bg-fixed text-primary-font min-h-screen flex flex-col">
+    <body
+        class="bg-gradient-to-b from-gradient-start to-gradient-end bg-fixed text-primary-font min-h-screen flex flex-col">
         <!-- <FallingBalls client:load /> -->
         <div class="fixed inset-0 -z-10 h-full">
             <DelaunayBackground client:load />
