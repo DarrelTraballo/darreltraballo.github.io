@@ -3,12 +3,14 @@ import Tag from "../components/Tag.jsx"
 import Button from "../components/Button.jsx"
 import { Icon } from "astro-iconify"
 import icons from "../utils/icons.js"
+import AnimatedProfileImage from "../components/AnimatedProfileImage.jsx"
 
 import ProfilePic from "../assets/images/face/profile_pic.png"
 import GradPic from "../assets/images/face/grad-pic.png"
 
 const isLocal = import.meta.env.MODE === "development"
-const imageSrc = isLocal ? ProfilePic.src : GradPic.src
+const toPic = isLocal ? ProfilePic.src : GradPic.src
+const fromPic = isLocal ? GradPic.src : ProfilePic.src
 
 const resumePath = "/Resume-Traballo_Railee_Darrel.pdf"
 // const imageSrc = GradPic.src
@@ -59,7 +61,7 @@ const socialLinks = [
                             aria-label={name}>
                             <Icon
                                 name={icon}
-                                class="w-6 h-6 text-primary-font transition-all group-hover:text-secondary-font group-hover:scale-110 sm:h-8 sm:w-8"
+                                class="w-6 h-6 text-primary-font transition-all group-hover:scale-110 sm:h-8 sm:w-8"
                             />
                         </a>
                     ))
@@ -67,11 +69,15 @@ const socialLinks = [
             </div>
         </div>
         <div class="justify-self-center order-1 md:order-2">
-            <img
-                src={imageSrc}
-                alt={"Darrel Traballo's profile picture"}
-                class="w-auto h-auto xl:max-w-96 xl:max-h-96 lg:max-w-96 lg:max-h-96 rounded-full object-cover"
-            />
+            <div class="relative w-auto h-auto xl:max-w-96 xl:max-h-96 lg:max-w-96 lg:max-h-96">
+                <AnimatedProfileImage
+                    toPic={toPic}
+                    fromPic={fromPic}
+                    alt="Darrel Traballo's profile picture"
+                    className="w-full h-full"
+                    client:load
+                />
+            </div>
         </div>
     </div>
 </section>

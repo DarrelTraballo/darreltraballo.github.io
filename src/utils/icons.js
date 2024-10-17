@@ -24,6 +24,9 @@ import DefaultBlackIcon from "../assets/images/icons/mdi--default-black.png"
 import ChevronDownIcon from "../assets/images/icons/mdi--chevron-down.png"
 import CheckIcon from "../assets/images/icons/mdi--check.png"
 import InformationIcon from "../assets/images/icons/mdi--information.png"
+import GithubIcon from "../assets/images/icons/mdi--github.png"
+import LinkedInIcon from "../assets/images/icons/mdi--linkedin.png"
+import EmailIcon from "../assets/images/icons/mdi--email.png"
 
 const icons = {
     // languages
@@ -53,6 +56,9 @@ const icons = {
     ChevronDown: ChevronDownIcon.src,
     Check: CheckIcon.src,
     Information: InformationIcon.src,
+    Github: GithubIcon.src,
+    LinkedIn: LinkedInIcon.src,
+    Email: EmailIcon.src,
 }
 
 export default icons
