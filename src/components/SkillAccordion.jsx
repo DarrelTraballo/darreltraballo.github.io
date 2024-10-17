@@ -25,11 +25,11 @@ export default function SkillAccordion({
     }
 
     return (
-        <div className='w-full max-w-2xl mx-auto rounded-lg shadow-sm bg-primary-bg bg-opacity-75 transition-all duration-300 hover:shadow-md'>
+        <div className='w-full max-w-2xl mx-auto rounded-lg shadow-sm bg-secondary-bg bg-opacity-75 transition-all duration-300 hover:shadow-md'>
             {/* Header Section */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className='w-full flex items-center justify-between p-3 sm:p-4 hover:bg-secondary-bg/75 rounded-lg transition-all duration-200'
+                className='w-full flex items-center justify-between p-3 sm:p-4 hover:bg-hover-bg/75 rounded-lg transition-all duration-200'
             >
                 <div className='flex items-center gap-2 sm:gap-3 min-w-10'>
                     <img 

@@ -4,9 +4,9 @@ export default {
     theme: {
         extend: {
             colors: {
-                "primary-bg": "#001F3F",
-                "secondary-bg": "#003B5C",
-                "tertiary-bg": "#206E37",
+                "primary-bg": "#0a192f",
+                "secondary-bg": "#112240",
+                "hover-bg": "#233554",
 
                 // background gradient colors
                 // green
@@ -14,8 +14,8 @@ export default {
                 // "gradient-end": "#7EFC28",
 
                 // blue
-                "gradient-start": "#001f3f ",
-                "gradient-end": "#0074D9 ",
+                "gradient-start": "#001f3f",
+                "gradient-end": "#0074D9",
 
                 "primary-font": "#ffffff",
                 "secondary-font": "#9ca3af",

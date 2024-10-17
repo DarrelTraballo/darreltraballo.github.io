@@ -4,7 +4,7 @@ export default function Tag({ iconSrc, displayText, index, expandable = true }) 
     const [isHovered, setIsHovered] = useState(false)
 
     const containerClasses = `
-        flex items-center bg-tertiary-font/50 hover:bg-tertiary-font text-primary-font rounded-full overflow-hidden transition-all duration-300 ease-in-out border border-tertiary-bg/30 px-2 py-2 sm:px-3 sm:py-1.5 text-xs sm:text-sm
+        flex items-center bg-tertiary-font/50 hover:bg-tertiary-font text-primary-font rounded-full overflow-hidden transition-all duration-300 ease-in-out border border-hover-bg/30 px-2 py-2 sm:px-3 sm:py-1.5 text-xs sm:text-sm
     `
 
     const textClasses = `
