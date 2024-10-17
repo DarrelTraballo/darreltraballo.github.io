@@ -29,7 +29,7 @@ export default function SkillAccordion({
             {/* Header Section */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className='w-full flex items-center justify-between p-3 sm:p-4 hover:bg-secondary-bg rounded-lg transition-all duration-200'
+                className='w-full flex items-center justify-between p-3 sm:p-4 hover:bg-secondary-bg/75 rounded-lg transition-all duration-200'
             >
                 <div className='flex items-center gap-2 sm:gap-3 min-w-10'>
                     <img 
@@ -37,7 +37,7 @@ export default function SkillAccordion({
                         className="w-4 h-4 md:w-5 md:h-5 shrink-0 transition-transform duration-200 hover:scale-110" 
                         alt={`${skillName} Icon`}
                     />
-                    <span className='font-medium text-primary-font text-sm sm:text-base break-words'>{skillName}</span>
+                    <span className='font-medium text-primary-font text-sm sm:text-base break-words text-left'>{skillName}</span>
                 </div>
                 <svg 
                     className={`w-4 h-4 sm:w-5 sm:h-5 shrink-0 transition-transform duration-200 text-secondary-font ml-4 ${isOpen ? "rotate-180" : ""}`}

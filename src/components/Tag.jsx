@@ -4,11 +4,11 @@ export default function Tag({ iconSrc, displayText, index, expandable = true }) 
     const [isHovered, setIsHovered] = useState(false)
 
     const containerClasses = `
-        flex items-center bg-tertiary-font/20 hover:bg-tertiary-font/30 text-primary-font rounded-full overflow-hidden transition-all duration-300 ease-in-out border border-tertiary-bg/30 px-2 py-2 sm:px-3 sm:py-1.5 text-xs sm:text-sm
+        flex items-center bg-tertiary-font/50 hover:bg-tertiary-font text-primary-font rounded-full overflow-hidden transition-all duration-300 ease-in-out border border-tertiary-bg/30 px-2 py-2 sm:px-3 sm:py-1.5 text-xs sm:text-sm
     `
 
     const textClasses = `
-        ${expandable ? 'whitespace-nowrap overflow-hidden transition-all duration-200 ease-in-out' : ''}
+        ${expandable ? 'whitespace-nowrap overflow-hidden transition-all duration-100 ease-in-out' : ''}
         ${expandable && isHovered ? 'max-w-xs ml-2 opacity-100' : ''}
         ${expandable && !isHovered ? 'max-w-0 ml-0 opacity-0' : ''}
         ${!expandable ? 'ml-2' : ''}
