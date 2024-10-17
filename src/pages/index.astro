@@ -1,7 +1,8 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
 import Header from "../layouts/Header.astro"
-import SkillsSection from "../layouts/SkillsSection.jsx"
+import SkillsSectionJsx from "../layouts/SkillsSection.jsx"
+import SkillsSectionAstro from "../layouts/SkillsSection.astro"
 import ProjectsSection from "../layouts/ProjectsSection.jsx"
 import Education from "../layouts/EducationSection.astro"
 import ContactMeSection from "../layouts/ContactMeSection.astro"
@@ -16,7 +17,9 @@ const pageTitle = "Darrel Traballo - Game Developer Portfolio"
     <!-- Body -->
     <div>
         <!-- Skills -->
-        <SkillsSection client:load />
+        <!-- once I've actually gained exp on these other technologies and languages, re-enable this -->
+        <SkillsSectionJsx client:load />
+        <!-- <SkillsSectionAstro /> -->
 
         <!-- Projects -->
         <ProjectsSection client:load />

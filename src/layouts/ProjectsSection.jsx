@@ -62,6 +62,8 @@ export default function ProjectsSection() {
                                 description={project.description}
                                 details={project.details}
                                 imageSrc={project.imageSrc}
+                                isPlayable={project.isPlayable}
+                                href={project.href}
                             />
                         ))
                     ) : (

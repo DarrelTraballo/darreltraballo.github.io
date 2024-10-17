@@ -9,8 +9,13 @@ export default {
                 "tertiary-bg": "#206E37",
 
                 // background gradient colors
-                "gradient-start": "#044321",
-                "gradient-end": "#7EFC28",
+                // green
+                // "gradient-start": "#044321",
+                // "gradient-end": "#7EFC28",
+
+                // blue
+                "gradient-start": "#001f3f ",
+                "gradient-end": "#0074D9 ",
 
                 "primary-font": "#ffffff",
                 "secondary-font": "#9ca3af",

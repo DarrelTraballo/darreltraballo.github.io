@@ -46,12 +46,14 @@ const AnimatedProfileImage = ({ toPic, fromPic, alt, className }) => {
                 src={toPic}
                 alt={alt}
                 className={`w-full h-full rounded-full object-cover ${className}`}
+                draggable="false"
             />
             <img
                 src={fromPic}
                 alt={alt}
                 className={`absolute top-0 left-0 w-full h-full rounded-full object-cover transition-opacity duration-0 ${className}`}
                 style={{ opacity: progress }}
+                draggable="false"
             />
         </div>
     )

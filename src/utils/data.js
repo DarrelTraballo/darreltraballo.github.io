@@ -21,6 +21,8 @@ export const data = {
             details: [
                 "Learned how to work with and configure Vertex and Fragment Shaders using Unity's Shader Language.",
             ],
+            isPlayable: false,
+            href: "#",
         },
         {
             id: "2",
@@ -34,6 +36,8 @@ export const data = {
                 "Learned how to use Unity's custom inspector.",
                 "Learned how to create/edit Scriptable Objects programmatically.",
             ],
+            isPlayable: false,
+            href: "#",
         },
         {
             id: "3",
@@ -44,6 +48,8 @@ export const data = {
                 "A Game-Based Learning application that introduces computer programming concepts using Wave Function Collapse for procedural generation.",
             tech: ["Unity", "CSharp"],
             details: ["3D game project developed for my Thesis."],
+            isPlayable: true,
+            href: "https://squeegeexd.itch.io/a-byte-sized-museum",
         },
         {
             id: "4",
@@ -53,6 +59,8 @@ export const data = {
             description: "A Python-based implementation of the Tile-Based Wave Function Collapse Algorithm",
             tech: ["Python", "Pygame", "Numpy"],
             details: ["Served as a prototype for testing for my final Thesis output."],
+            isPlayable: false,
+            href: "#",
         },
         {
             id: "5",
@@ -63,6 +71,8 @@ export const data = {
                 "A 2D Tower Defense game where you play as a computer's Antivirus Software defending against waves of computer malware.",
             tech: ["Unity", "CSharp"],
             details: ["Made in 5 days for a Hackathon held by our University."],
+            isPlayable: false,
+            href: "#",
         },
         {
             id: "6",
@@ -74,6 +84,8 @@ export const data = {
             details: [
                 "Made in 2 weeks with a friend for the Pirate Software Game Jam 14 (Jan 12, 2024 – Jan 27, 2024).",
             ],
+            isPlayable: true,
+            href: "https://squeegeexd.itch.io/scatter",
         },
         {
             id: "7",
@@ -87,6 +99,8 @@ export const data = {
                 "Made alongside a research manuscript of the same title as a final project for my Discrete Structures 2 course.",
                 "Manuscript was recognized as runner-up for Best Manuscript in class.",
             ],
+            isPlayable: false,
+            href: "#",
         },
         {
             id: "8",
@@ -99,6 +113,8 @@ export const data = {
                 "Ender Dragon's behavior patterns were created to be as close to the original game as possible",
                 "Learned how to implement enemy AI behavior using State Machines to manage the Ender Dragon's behavior patterns.",
             ],
+            isPlayable: false,
+            href: "#",
         },
         {
             id: "9",
@@ -111,6 +127,8 @@ export const data = {
             details: [
                 "Custom background effect was created by implementing Delauney Triangulation and Poisson Disc Sampling.",
             ],
+            isPlayable: true,
+            href: "https://darreltraballo.github.io",
         },
     ],
     skills: {
