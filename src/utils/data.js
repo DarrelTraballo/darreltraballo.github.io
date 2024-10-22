@@ -7,6 +7,7 @@ import ScatterImage from "../assets/images/projects/Scatter.png"
 import GeneticAlgorithmImage from "../assets/images/projects/GeneticAlgorithm.png"
 import EnderDragonAIImage from "../assets/images/projects/EnderDragonAI.gif"
 import PortfolioImage from "../assets/images/projects/PortfolioImage.png"
+import ThreeWaterImage from "../assets/images/projects/ThreeJS_Water.gif"
 
 export const data = {
     projects: [
@@ -17,7 +18,7 @@ export const data = {
             imageSrc: WaterImage.src,
             description:
                 "An attempt to create a simple simulation of waves using Unity's Shader Language, implementing Sum of Sines and Lambertian Diffuse lighting.",
-            tech: ["Unity", "CSharp"],
+            tech: ["Unity", "CSharp", "HLSL"],
             details: [
                 "Learned how to work with and configure Vertex and Fragment Shaders using Unity's Shader Language.",
             ],
@@ -130,6 +131,17 @@ export const data = {
             isPlayable: true,
             href: "https://darreltraballo.github.io",
         },
+        {
+            id: "10",
+            title: "Water Simulation with Three.js and GLSL Shaders",
+            tag: "Web Development",
+            imageSrc: ThreeWaterImage.src,
+            description: "My Water Shader project translated into Three.js and GLSL for the shaders.",
+            tech: ["Javascript", "React", "ThreeJS", "GLSL"],
+            details: ["Learned how to create GLSL Vertex and Fragment Shaders using Three.JS"],
+            isPlayable: false,
+            href: "#",
+        },
     ],
     skills: {
         languages: [
@@ -150,14 +162,14 @@ export const data = {
             {
                 name: "Python",
                 proficiency: "Intermediate",
-                yearsOfExperience: 1,
+                yearsOfExperience: 2,
                 certifications: [],
                 additionalDetails: "",
             },
             {
                 name: "Javascript",
                 proficiency: "Beginner",
-                yearsOfExperience: 0,
+                yearsOfExperience: 2,
                 certifications: [],
                 additionalDetails: "",
             },
@@ -172,16 +184,23 @@ export const data = {
                     additionalDetails: "",
                 },
                 {
-                    name: "Unity Shader Programming (HLSL)",
+                    name: "HLSL",
                     proficiency: "Beginner",
-                    yearsOfExperience: 0,
+                    yearsOfExperience: 1,
+                    certifications: [],
+                    additionalDetails: "",
+                },
+                {
+                    name: "GLSL",
+                    proficiency: "Beginner",
+                    yearsOfExperience: 1,
                     certifications: [],
                     additionalDetails: "",
                 },
                 {
                     name: "Pygame",
                     proficiency: "Beginner",
-                    yearsOfExperience: 0,
+                    yearsOfExperience: 1,
                     certifications: [],
                     additionalDetails: "",
                 },
@@ -213,21 +232,21 @@ export const data = {
                 {
                     name: "Numpy",
                     proficiency: "Beginner",
-                    yearsOfExperience: 0,
+                    yearsOfExperience: 1,
                     certifications: [],
                     additionalDetails: "",
                 },
                 {
                     name: "Pandas",
                     proficiency: "Beginner",
-                    yearsOfExperience: 0,
+                    yearsOfExperience: 1,
                     certifications: [],
                     additionalDetails: "",
                 },
                 {
                     name: "Matplotlib",
                     proficiency: "Beginner",
-                    yearsOfExperience: 0,
+                    yearsOfExperience: 1,
                     certifications: [],
                     additionalDetails: "",
                 },

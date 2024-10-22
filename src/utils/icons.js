@@ -13,6 +13,9 @@ import PygameIcon from "../assets/images/icons/pygame-logo.png"
 import ReactIcon from "../assets/images/icons/mdi--react.png"
 import AstroIcon from "../assets/images/icons/devicon-plain--astro.png"
 import TailwindCSSIcon from "../assets/images/icons/mdi--tailwind.png"
+import ThreeJSIcon from "../assets/images/icons/skill-icons--threejs-light.png"
+import GLSLIcon from "../assets/images/icons/vscode-icons--file-type-glsl.png"
+import HLSLIcon from "../assets/images/icons/vscode-icons--file-type-hlsl.png"
 
 // other
 import LocationIcon from "../assets/images/icons/mdi--location.png"
@@ -45,6 +48,9 @@ const icons = {
     React: ReactIcon.src,
     Astro: AstroIcon.src,
     TailwindCSS: TailwindCSSIcon.src,
+    ThreeJS: ThreeJSIcon.src,
+    GLSL: GLSLIcon.src,
+    HLSL: HLSLIcon.src,
 
     // other
     GameDevelopment: GamepadVariantIcon.src,
