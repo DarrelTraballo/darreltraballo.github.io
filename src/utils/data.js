@@ -13,11 +13,11 @@ export const data = {
     projects: [
         {
             id: "1",
-            title: "Water Simulation",
+            title: "Water Simulation with Unity and HLSL Shaders",
             tag: "Game Development",
             imageSrc: WaterImage.src,
             description:
-                "An attempt to create a simple simulation of waves using Unity's Shader Language, implementing Sum of Sines and Lambertian Diffuse lighting.",
+                "An attempt to create a simple simulation of waves using Unity and HLSL, implementing Sum of Sines and Lambertian Diffuse lighting.",
             tech: ["Unity", "CSharp", "HLSL"],
             details: [
                 "Learned how to work with and configure Vertex and Fragment Shaders using Unity's Shader Language.",
