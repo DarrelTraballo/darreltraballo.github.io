@@ -7,19 +7,19 @@ import ScatterImage from "../assets/images/projects/Scatter.png"
 import GeneticAlgorithmImage from "../assets/images/projects/GeneticAlgorithm.png"
 import EnderDragonAIImage from "../assets/images/projects/EnderDragonAI.gif"
 import PortfolioImage from "../assets/images/projects/PortfolioImage.png"
-import ThreeWaterImage from "../assets/images/projects/ThreeJS_Water.gif"
+import ThreeWaterImage from "../assets/images/projects/ThreeJSWater.gif"
 
 export const data = {
     projects: [
         {
             id: "1",
             title: "Water Simulation with Unity and HLSL Shaders",
-            tag: "Game Development",
+            tags: ["Game Development"],
             imageSrc: WaterImage.src,
-            description:
-                "An attempt to create a simple simulation of waves using Unity and HLSL, implementing Sum of Sines and Lambertian Diffuse lighting.",
+            description: "My first attempt at creating a simple simulation of waves using Unity and HLSL.",
             tech: ["Unity", "CSharp", "HLSL"],
             details: [
+                "Implemented Sum of Sines and Basic Phong lighting.",
                 "Learned how to work with and configure Vertex and Fragment Shaders using Unity's Shader Language.",
             ],
             isPlayable: false,
@@ -27,8 +27,23 @@ export const data = {
         },
         {
             id: "2",
+            title: "Water Simulation with Three.js and GLSL Shaders",
+            tags: ["Game Development", "Web Development"],
+            imageSrc: ThreeWaterImage.src,
+            description:
+                "My second attempt at creating a simple simulation of waves. This time using Three,js and GLSL.",
+            tech: ["Javascript", "React", "ThreeJS", "GLSL"],
+            details: [
+                "Implemented Fractional Browinian Motion for the wave effect and a combination of Phong Lighting with Fresnel Reflection for the scene's lighting.",
+                "Learned how to create GLSL Vertex and Fragment Shaders using Three.js",
+            ],
+            isPlayable: false,
+            href: "#",
+        },
+        {
+            id: "3",
             title: "Pokemon Battle System Clone",
-            tag: "Game Development",
+            tags: ["Game Development"],
             imageSrc: PokemonImage.src,
             description: "A simplified recreation of Pokemon's Generation 1 battle system.",
             tech: ["Unity", "CSharp"],
@@ -41,9 +56,9 @@ export const data = {
             href: "#",
         },
         {
-            id: "3",
+            id: "4",
             title: "A Byte-Sized Museum",
-            tag: "Game Development",
+            tags: ["Game Development"],
             imageSrc: AByteSizedMuseumImage.src,
             description:
                 "A Game-Based Learning application that introduces computer programming concepts using Wave Function Collapse for procedural generation.",
@@ -53,9 +68,9 @@ export const data = {
             href: "https://squeegeexd.itch.io/a-byte-sized-museum",
         },
         {
-            id: "4",
+            id: "5",
             title: "Wave Function Collapse Algorithm",
-            tag: "Game Development",
+            tags: ["Game Development"],
             imageSrc: WFCImage.src,
             description: "A Python-based implementation of the Tile-Based Wave Function Collapse Algorithm",
             tech: ["Python", "Pygame", "Numpy"],
@@ -64,9 +79,9 @@ export const data = {
             href: "#",
         },
         {
-            id: "5",
+            id: "6",
             title: "PCDefender",
-            tag: "Game Development",
+            tags: ["Game Development"],
             imageSrc: PCDefenderImage.src,
             description:
                 "A 2D Tower Defense game where you play as a computer's Antivirus Software defending against waves of computer malware.",
@@ -76,9 +91,9 @@ export const data = {
             href: "#",
         },
         {
-            id: "6",
+            id: "7",
             title: "Scatter",
-            tag: "Game Development",
+            tags: ["Game Development"],
             imageSrc: ScatterImage.src,
             description: "A 2D RTS game where survival depends on real-time resource scavenging.",
             tech: ["Unity", "CSharp"],
@@ -89,9 +104,9 @@ export const data = {
             href: "https://squeegeexd.itch.io/scatter",
         },
         {
-            id: "7",
+            id: "8",
             title: "Genetic Algorithm for Solving a Multiple Variable Combinatorial Optimization Problem",
-            tag: "Others",
+            tags: ["Others"],
             imageSrc: GeneticAlgorithmImage.src,
             description:
                 "A Python-based program using a Genetic Algorithm to solve a multi-variable combinatorial optimization problem.",
@@ -104,9 +119,9 @@ export const data = {
             href: "#",
         },
         {
-            id: "8",
+            id: "9",
             title: "Ender Dragon AI Clone",
-            tag: "Game Development",
+            tags: ["Game Development"],
             imageSrc: EnderDragonAIImage.src,
             description: "An attempt to recreate Minecraft's Ender Dragon AI in Unity.",
             tech: ["Unity", "CSharp"],
@@ -118,9 +133,9 @@ export const data = {
             href: "#",
         },
         {
-            id: "9",
+            id: "10",
             title: "Portfolio Website",
-            tag: "Web Development",
+            tags: ["Web Development"],
             imageSrc: PortfolioImage.src,
             description:
                 "A personal website built using Astro, React, and Tailwind CSS, showcasing my game development and algorithm-focused projects.",
@@ -130,17 +145,6 @@ export const data = {
             ],
             isPlayable: true,
             href: "https://darreltraballo.github.io",
-        },
-        {
-            id: "10",
-            title: "Water Simulation with Three.js and GLSL Shaders",
-            tag: "Web Development",
-            imageSrc: ThreeWaterImage.src,
-            description: "My Water Shader project translated into Three.js and GLSL for the shaders.",
-            tech: ["Javascript", "React", "ThreeJS", "GLSL"],
-            details: ["Learned how to create GLSL Vertex and Fragment Shaders using Three.JS"],
-            isPlayable: false,
-            href: "#",
         },
     ],
     skills: {
