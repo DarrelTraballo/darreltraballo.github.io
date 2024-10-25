@@ -34,11 +34,11 @@ export const data = {
                 "My second attempt at creating a simple simulation of waves. This time using Three,js and GLSL.",
             tech: ["Javascript", "React", "ThreeJS", "GLSL"],
             details: [
-                "Implemented Fractional Browinian Motion for the wave effect and a combination of Phong Lighting with Fresnel Reflection for the scene's lighting.",
+                "Implemented Fractional Browinian Motion for the wave effect and a combination of Phong Lighting with Fresnel Reflection and Subsurface Scattering for the scene's lighting model.",
                 "Learned how to create GLSL Vertex and Fragment Shaders using Three.js",
             ],
-            isPlayable: false,
-            href: "#",
+            isPlayable: true,
+            href: "https://darreltraballo.github.io/threejs-playground/#/Water",
         },
         {
             id: "3",
