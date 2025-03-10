@@ -5,12 +5,13 @@ import { Icon } from "astro-iconify"
 import icons from "../utils/icons.js"
 import AnimatedProfileImage from "../components/AnimatedProfileImage.jsx"
 
-import ProfilePic from "../assets/images/face/profile_pic.png"
+import Bulbasaur from "../assets/images/face/profile_pic.png"
 import GradPic from "../assets/images/face/grad-pic.png"
+import ProfilePic from "../assets/images/face/Traballo_pic.jpg"
 
 const isLocal = import.meta.env.MODE === "development"
-const toPic = isLocal ? ProfilePic.src : GradPic.src
-const fromPic = isLocal ? GradPic.src : ProfilePic.src
+const toPic = isLocal ? Bulbasaur.src : ProfilePic.src
+const fromPic = isLocal ? ProfilePic.src : Bulbasaur.src
 
 const resumePath = "/Resume-Traballo_Railee_Darrel.pdf"
 // const imageSrc = GradPic.src
@@ -45,10 +46,11 @@ const socialLinks = [
                 />
             </div>
             <p class="text-justify text-sm md:text-base mt-2">
-                I'm a <span id="age"></span> year old Game Developer specializing in <strong
-                    >Gameplay Programming</strong
-                > and <strong>Procedural Generation</strong> using Unity. I like to spend my free time attempting to recreate
-                whatever existing game mechanic I think looks cool.
+                I'm a <span id="age"></span> year old Game Developer specializing in designing and implementing game mechanics
+                in Unity, focusing on bringing interactive systems to life and ensuring they work cohesively. I enjoy creating
+                engaging and responsive gameplay experiences, from core mechanics to interconnected systems. I also have
+                a passion for creating visually striking experiences, often exploring shaders and procedural techniques to
+                enhance aesthetics.
             </p>
             <div class="flex flex-wrap gap-2 mt-5">
                 <Button iconSrc={icons.FileDownload} displayText="Resume" href={resumePath} />
